@@ -6,36 +6,33 @@
                 <div class="col-md-4">
                     <div class="features_item sm-m-top-30">
                         <div class="f_item_icon">
-                            <i class="fa fa-thumbs-o-up"></i>
+                            <i class="fa fa-shield "></i>
                         </div>
                         <div class="f_item_text">
-                            <h3>Best Quality Design</h3>
-                            <p>Lorem ipsum dolor sit amet consectetur adipiscing elit pellentesque eleifend
-                                in sit amet mattis volutpat rhoncus.</p>
+                            <h3>Takes the mystery out of the history</h3>
+                            <p>When looking at a vehicle most of its history is hidden. The odometer can tell you how many miles it’s been driven, but it says nothing about what it's been through: its junk salvage information, insurance information, title history, or the brands on the titles. Gives you all of those.</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="features_item sm-m-top-30">
                         <div class="f_item_icon">
-                            <i class="fa fa-tablet"></i>
+                            <i class="fa fa-rocket"></i>
                         </div>
                         <div class="f_item_text">
-                            <h3>Responsive Design</h3>
-                            <p>Lorem ipsum dolor sit amet consectetur adipiscing elit pellentesque eleifend
-                                in sit amet mattis volutpat rhoncus.</p>
+                            <h3>Fast, no-hassle turn around</h3>
+                            <p>Instant results are our specialty. One click and your report is sent to your email. We’re so fast you can even use while you’re in the middle of a negotiation, letting you instantly gain the upper hand.</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="features_item sm-m-top-30">
                         <div class="f_item_icon">
-                            <i class="fa fa-sliders"></i>
+                            <i class="fa fa-address-card"></i>
                         </div>
                         <div class="f_item_text">
-                            <h3>Easy to Customize</h3>
-                            <p>Lorem ipsum dolor sit amet consectetur adipiscing elit pellentesque eleifend
-                                in sit amet mattis volutpat rhoncus.</p>
+                            <h3>Gives you the best value for your money</h3>
+                            <p>Helps you shop smart when you’re buying a car, and we guarantee you’re shopping smart when you buy VIN reports from us. We stay in business by giving you the best value that you can find.</p>
                         </div>
                     </div>
                 </div>
@@ -79,14 +76,13 @@
                     <div class="business_item sm-m-top-50">
                         <h2 class="text-uppercase"><strong>Made</strong> is Template For Business</h2>
                         <ul>
-                            <li><i class="fa fa-arrow-circle-right"></i> Clean & Modern Design</li>
-                            <li><i class="fa  fa-arrow-circle-right"></i> Fully Responsive</li>
-                            <li><i class="fa  fa-arrow-circle-right"></i> Google Fonts</li>
+                            <li><i class="fa fa-arrow-circle-right"></i> Title and Brand History</li>
+                            <li><i class="fa  fa-arrow-circle-right"></i> Insurance Claim Information</li>
+                            <li><i class="fa  fa-arrow-circle-right"></i> Recall Events</li>
+                            <li><i class="fa  fa-arrow-circle-right"></i> Odometer Accuracy</li>
+                            <li><i class="fa  fa-arrow-circle-right"></i> And More..</li>
                         </ul>
-                        <p class="m-top-20">Lorem ipsum dolor sit amet, consectetur adipiscing elit pellentesque eleifend in mi 
-                            sit amet mattis suspendisse ac ligula volutpat nisl rhoncus sagittis cras suscipit 
-                            lacus quis erat malesuada lobortis eiam dui magna volutpat commodo eget pretium vitae
-                            elit etiam luctus risus urna in malesuada ante convallis.</p>
+                        <p class="m-top-20">Our reports give you comprehensive vehicle information that you can't get from a visual inspection or even a test drive. Our reports include title and brand history, insurance claim information, recall events, odometer accuracy, and more. When you want to know what you need to know, you can count on us.</p>
 
                         <div class="business_btn">
                             <a href="https://bootstrapthemes.co" class="btn btn-default m-top-20">Read More</a>
@@ -110,7 +106,32 @@
                 <h5>Clean and Modern design is our best specialist</h5>
             </div>
 
-            <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+            <div class="row">
+                <div class="col-md-6">
+                    <center>
+                        <div style="height: 200px;">
+                            <img src="https://www.clearvin.com/img/security-badge.png" alt="">
+                        </div>
+                        
+                        <h3>Safe and Secure 100% Guarantee</h3>
+                        <p>When you’re in the market for a used car, it’s important to arm yourself with the best information available to make the right decision. With ClearVin you will instantly get accurate information for the lowest price around!
+                            Read about our 100% Money Back Guarantee.</p>
+                    </center>
+                </div>
+                <div class="col-md-6">
+                    <center>
+                        <div style="height: 200px;">
+                            <img src="https://www.clearvin.com/img/nmvtis_logo_only.svg" alt="" style="margin-top: 50px;">
+                        </div>
+                        
+                        <h3>Official Source</h3>
+                        <p>ClearVin is an Approved NMVTIS Data Provider. The National Motor Vehicle Title Information System (NMVTIS) is a program of the U.S. Department of Justice. This program protects you from fraud and unsafe vehicles. There is no more accurate and complete source for VIN data.</p>
+                    </center>
+                    
+                </div>
+            </div>
+
+            {{-- <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
                 <!-- Indicators -->
                 <ol class="carousel-indicators">
                     <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
@@ -321,7 +342,7 @@
                     <i class="fa fa-angle-right" aria-hidden="true"></i>
                     <span class="sr-only">Next</span>
                 </a>
-            </div>
+            </div> --}}
         </div><!-- End off row -->
     </div><!-- End off container -->
 </section><!-- End off Product section -->
