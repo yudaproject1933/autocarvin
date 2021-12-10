@@ -60,6 +60,18 @@
         <!-- End Header Navigation -->
 
         <!-- navbar menu -->
+        @if (url()->current() == URL::to('/')."/check")
+        <div class="collapse navbar-collapse" id="navbar-menu">
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="/">Home</a></li>                    
+                {{-- <li><a href="#features">About</a></li>
+                <li><a href="#business">Service</a></li>
+                <li><a href="#work">Portfolio</a></li>
+                <li><a href="#test">Blog</a></li>
+                <li><a href="#contact">Contact</a></li> --}}
+            </ul>
+        </div><!-- /.navbar-collapse -->
+        @else
         <div class="collapse navbar-collapse" id="navbar-menu">
             <ul class="nav navbar-nav navbar-right">
                 <li><a href="#home">Home</a></li>                    
@@ -70,6 +82,8 @@
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </div><!-- /.navbar-collapse -->
+        @endif
+        
     </div> 
 
 </nav>

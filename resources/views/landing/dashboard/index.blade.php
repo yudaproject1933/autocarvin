@@ -16,9 +16,9 @@
                                 <div class="row">
                                     <div class="col-md-2"></div>
                                     <div class="col-md-8">
-                                        <form action="" method="POST">
+                                        <form action="/check" method="GET">
                                             <div class="col-md-10">
-                                                <input type="text" class="form-control" minlength="17" maxlength="17" name="vin" placeholder="Enter 17 Character VIN Number" required>
+                                                <input type="text" name="vin" class="form-control" minlength="17" maxlength="17" name="vin" placeholder="Enter 17 Character VIN Number" required>
                                             </div>
                                             <div class="col-md-2">
                                                 <button class="btn btn-primary"><i class="fa fa-search"></i> Check Car!</button>
@@ -43,4 +43,6 @@
         </div><!--End off row-->
     </div><!--End off container -->
 </section> <!--End off Home Sections-->
+
+@include('layouts.landing.content')
 @endsection
