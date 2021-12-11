@@ -8,6 +8,7 @@ use Illuminate\Http\Request;
 use App\Models\Transaction;
 
 use Illuminate\Support\Facades\Storage;
+use Auth;
 
 class DashboardController extends Controller
 {
@@ -18,48 +19,53 @@ class DashboardController extends Controller
      */
     public function index()
     {
-        $tgl_now = '';
-        $tgl_end = '';
+        if (Auth::user()->role === 'admin') {
+            $tgl_now = '';
+            $tgl_end = '';
 
-        if (date('d') <= 15) {
-            $tgl_now = date('Y-m-01');
-            $tgl_end = date('Y-m-15');
+            if (date('d') <= 15) {
+                $tgl_now = date('Y-m-01');
+                $tgl_end = date('Y-m-15');
+            }else{
+                $tgl_now = date('Y-m-16');
+                $tgl_end = date('Y-m-t');
+            }
+            // dd(date('d'));
+
+            $start_date = isset($_GET['start_date']) ? $_GET['start_date'] : $tgl_now;
+            $end_date = isset($_GET['end_date']) ? $_GET['end_date'] : $tgl_end;
+            $status_payment = isset($_GET['status_payment']) ? $_GET['status_payment'] : '';
+
+            $data_email = Transaction::select('*');
+            if ($start_date !== '' && $end_date === '') {
+                $data_email = $data_email->whereDate('created_date', '=', $start_date);
+            }
+            if ($start_date !== '' && $end_date !== '') {
+                $data_email = $data_email->whereDate('created_date', '>=', $start_date);
+            }
+            if ($end_date !== '') {
+                $data_email = $data_email->whereDate('created_date', '<=', $end_date);
+            }
+            if ($status_payment !== '') {
+                $data_email = $data_email->where('status_payment',$status_payment);
+            }
+            // else{
+            //     $data_email = $data_email->where('status_payment',"pending");
+            // }
+
+            $data_email = $data_email->orderBy('created_date','DESC')->get();
+            // dd($data_email);
+            // Session::flush();
+            $data['result_data'] = $data_email;
+            $data['start_date'] = $start_date;
+            $data['end_date'] = $end_date;
+            $data['status_payment'] = $status_payment;
+
+            return view('admin.dashboard.index', $data);
         }else{
-            $tgl_now = date('Y-m-16');
-            $tgl_end = date('Y-m-t');
+            return redirect('/');
         }
-        // dd(date('d'));
-
-        $start_date = isset($_GET['start_date']) ? $_GET['start_date'] : $tgl_now;
-        $end_date = isset($_GET['end_date']) ? $_GET['end_date'] : $tgl_end;
-        $status_payment = isset($_GET['status_payment']) ? $_GET['status_payment'] : '';
-
-        $data_email = Transaction::select('*');
-        if ($start_date !== '' && $end_date === '') {
-            $data_email = $data_email->whereDate('created_date', '=', $start_date);
-        }
-        if ($start_date !== '' && $end_date !== '') {
-            $data_email = $data_email->whereDate('created_date', '>=', $start_date);
-        }
-        if ($end_date !== '') {
-            $data_email = $data_email->whereDate('created_date', '<=', $end_date);
-        }
-        if ($status_payment !== '') {
-            $data_email = $data_email->where('status_payment',$status_payment);
-        }
-        // else{
-        //     $data_email = $data_email->where('status_payment',"pending");
-        // }
-
-        $data_email = $data_email->orderBy('created_date','DESC')->get();
-        // dd($data_email);
-        // Session::flush();
-        $data['result_data'] = $data_email;
-        $data['start_date'] = $start_date;
-        $data['end_date'] = $end_date;
-        $data['status_payment'] = $status_payment;
-
-        return view('admin.dashboard.index', $data);
+        
     }
 
     public function upload_report(Request $request)
