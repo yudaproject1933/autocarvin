@@ -27,6 +27,6 @@ Route::get('/check', 'App\Http\Controllers\Landing\CheckoutController@check');
 // })->name('dashboard');
 
 Route::group(['middleware' => 'auth'], function() {
-    //landing
-    
+    //dashboard
+    Route::post('/upload_report', 'App\Http\Controllers\Landing\DashboardController@upload_report');
 });

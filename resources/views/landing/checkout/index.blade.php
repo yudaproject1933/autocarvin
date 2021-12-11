@@ -146,7 +146,7 @@
                         </div>
                         
                         <h3>Safe and Secure 100% Guarantee</h3>
-                        <p>When you’re in the market for a used car, it’s important to arm yourself with the best information available to make the right decision. With ClearVin you will instantly get accurate information for the lowest price around!
+                        <p>When you're in the market for a used car, it's important to arm yourself with the best information available to make the right decision. With ClearVin you will instantly get accurate information for the lowest price around!
                             Read about our 100% Money Back Guarantee.</p>
                     </center>
                 </div>

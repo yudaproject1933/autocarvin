@@ -18,7 +18,7 @@
                                     <div class="col-md-8">
                                         <form action="/check" method="GET">
                                             <div class="col-md-10">
-                                                <input type="text" name="vin" class="form-control" minlength="17" maxlength="17" name="vin" placeholder="Enter 17 Character VIN Number" required>
+                                                <input type="text" name="vin" class="form-control" minlength="17" maxlength="17" name="vin" placeholder="Enter 17 Character VIN Number" required style="text-transform: uppercase;">
                                             </div>
                                             <div class="col-md-2">
                                                 <button class="btn btn-primary"><i class="fa fa-search"></i> Check Car!</button>
