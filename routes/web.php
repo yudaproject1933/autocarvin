@@ -29,4 +29,6 @@ Route::get('/check', 'App\Http\Controllers\Landing\CheckoutController@check');
 Route::group(['middleware' => 'auth'], function() {
     //dashboard
     Route::post('/upload_report', 'App\Http\Controllers\Landing\DashboardController@upload_report');
+    Route::post('/generate_report', 'App\Http\Controllers\Landing\DashboardController@generate_report');
+    Route::get('/sendEmail/{id}', 'App\Http\Controllers\Landing\DashboardController@sendEmail');
 });

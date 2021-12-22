@@ -2,12 +2,15 @@
 
 namespace App\Http\Controllers\Landing;
 
+use File;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
 use App\Models\Transaction;
 
 use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Facades\Mail;
+use App\Mail\TransactionEmail;
 use Auth;
 
 class DashboardController extends Controller
@@ -68,12 +71,26 @@ class DashboardController extends Controller
         
     }
 
+    public function generate_report(Request $request)
+    {
+        // dd($request->content);
+        $data = Transaction::findOrFail($request->id_email);
+        $vin = $data->vin;
+    
+        $file_name = $vin.'.blade.php';
+        $content_file = $request->content.' '.File::get(storage_path('setting_report/setting.blade.php'));
+        // $dir = Storage::put(storage_path('app/public/report/'.$file_name),$content_file);
+        // $dir = Storage::disk('local')->put('app/public/report/'.$file_name, $content_file);
+        
+        return $content_file;
+    }
+
     public function upload_report(Request $request)
     {
         $file = $request->file('file_docs');
         $name_file = $file->getClientOriginalName();
 
-        $path = Storage::putFileAs('public/report',$file, $name_file);
+        $path = Storage::putFileAs('/report',$file, $name_file);
 
         // dd($path);
         // $model = Transaction::where(['id' => $request->id_transaction])->first();
@@ -84,6 +101,34 @@ class DashboardController extends Controller
         ]);
 
         return redirect()->back();
+    }
+
+    public function sendEmail($id)
+    {
+        $model = Transaction::findOrFail($id);
+        $docs = Storage::get('public/report/'.$model['vin'].'.pdf');
+
+        $details = [
+            'title' => 'Mail From Premium Report',
+            'body' => 'test send email',
+            'link'  => url('/').Storage::url($model['link_docs']),
+            'docs_attach' => $docs,
+            'docs_name' => '',
+            'vin' => $model['vin'],
+        ];
+
+        $email = $model->email;
+        $kirim = Mail::to($email)->send(new TransactionEmail($details));
+
+        $model->update([
+            'status_payment' => 'success',
+            'updated_date' => date('Y-m-d H:i:s')
+        ]);
+
+        return [
+            'success' => true,
+            'message' => "Email berhasil dikirim"
+        ];
     }
 
     /**

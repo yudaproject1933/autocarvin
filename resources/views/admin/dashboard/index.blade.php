@@ -89,7 +89,9 @@
                             <td>{{$no++;}}</td>
                             <td>{{$value['vin']}}</td>
                             <td>{{$value['email']}}</td>
-                            <td><a href="{{$path}}" target="_blank">{{$path}}</a></td>
+                            <td>
+                                <a href="{{$path}}" target="_blank">{{is_null($value['link_docs']) ? '' : $path}}</a>
+                            </td>
                             <td>{{$value['status_payment']}}</td>
                             <td>
                                 <button type="button" class="btn btn-success" title="Upload" onclick="updateData({{ $value['id'] }})"><i class="fa fa-file"></i></button>&nbsp;
@@ -160,44 +162,15 @@
     </div>
 </div>
   
-<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-        <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Form Data</h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-            </button>
-        </div>
-        <div class="modal-body">
-            <form>
-            <div class="form-group">
-                <label for="email-email" class="col-form-label">Email:</label>
-                <input type="text" class="form-control" id="email-email">
-            </div>
-            <div class="form-group">
-                <label for="email-phone" class="col-form-label">Phone:</label>
-                <input type="text" class="form-control" id="email-phone">
-            </div>
-            <div class="form-group">
-                <label for="email-vin" class="col-form-label">Vin:</label>
-                <input type="text" class="form-control" id="email-vin" style="text-transform:uppercase">
-            </div>
-            </form>
-        </div>
-        <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-primary" onclick="create()"><i class="fa fa-save"></i> Save</button>
-        </div>
-        </div>
-    </div>
-</div>
 <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
 <script src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>
 <script src="https://cdn.datatables.net/1.11.3/js/dataTables.bootstrap5.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+
+{{-- swal --}}
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
 <script>
     $(document).ready(function() {
@@ -233,7 +206,7 @@
                         headers: {
                             'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
                         },
-                        url : "/send-email/"+id,
+                        url : "/sendEmail/"+id,
                         method : "GET",
                         contentType: "application/json",
                         dataType: "json",

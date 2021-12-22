@@ -88,9 +88,9 @@ class CheckoutController extends Controller
      */
     public function store(Request $request)
     {
-        // dd($request->vin);
+        // dd($request->status_payment);
 
-        $get_data = Transaction::where(['vin' => $request->vin, 'status_payment' => $request->status_payment])->first(); 
+        $get_data = Transaction::where(['vin' => $request->vin,  'email' => $request->email, 'status_payment' => $request->status_payment])->first(); 
         // dd($get_data);
         if (is_null($get_data)) {
             $model = Transaction::create([
