@@ -10,18 +10,24 @@
                     <div class="hello_slid">
                         <div class="slid_item">
                             <div class="home_text ">
-                                <h2 class="text-white">Welcome to <strong>Made</strong></h2>
-                                <h1 class="text-white">We Do Business All Of Time</h1>
-                                <h3 class="text-white">- We Create a <strong>Concept</strong> into The Market -</h3>
+                                <h2 class="text-white">Vehicle History & VIN Lookup</h2>
+                                <h3 class="text-white">- Avoid costly problems by checking car history before you selling it. Enter VIN and get a vehicle report instantly -</h3>
                                 <div class="row">
                                     <div class="col-md-2"></div>
                                     <div class="col-md-8">
                                         <form action="/check" method="GET">
-                                            <div class="col-md-10">
-                                                <input type="text" name="vin" class="form-control" minlength="17" maxlength="17" name="vin" placeholder="Enter 17 Character VIN Number" required style="text-transform: uppercase;">
+                                            <div class="row">
+                                                <div class="col-md-12">
+                                                    <input type="text" name="vin" class="form-control" minlength="17" maxlength="17" name="vin" placeholder="Enter 17 Character VIN Number" required style="text-transform: uppercase;" >
+                                                </div>
                                             </div>
-                                            <div class="col-md-2">
-                                                <button class="btn btn-primary"><i class="fa fa-search"></i> Check Car!</button>
+                                            <div class="row" style="margin-top: 10px;">
+                                                <div class="col-md-6">
+                                                    <img src="{{asset('landing/images/check.png')}}" alt="empty">
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <button class="btn btn-primary" style="float: right;"><i class="fa fa-search"></i> LOOKUP VIN RECORD</button>
+                                                </div>
                                             </div>
                                         </form>
                                     </div>

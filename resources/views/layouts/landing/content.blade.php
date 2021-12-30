@@ -48,33 +48,35 @@
         <div class="row">
             <div class="main_business">
                 <div class="col-md-6">
-                    <div class="business_slid">
-                        <div class="slid_shap bg-grey"></div>
-                        <div class="business_items text-center">
-                            <div class="business_item">
-                                <div class="business_img">
-                                    <img src="{{asset('landing/images/about-img1.jpg')}}" alt="" />
+                    <div class="row">
+                        <div class="col-md-6">
+                            <center>
+                                <div style="height: 200px;">
+                                    <img src="https://www.clearvin.com/img/security-badge.png" alt="">
                                 </div>
-                            </div>
-
-                            <div class="business_item">
-                                <div class="business_img">
-                                    <img src="{{asset('landing/images/about-img1.jpg')}}" alt="" />
+                                
+                                <h3>Safe and Secure 100% Guarantee</h3>
+                                <p>When you’re in the market for a used car, it’s important to arm yourself with the best information available to make the right decision. With ClearVin you will instantly get accurate information for the lowest price around!
+                                    Read about our 100% Money Back Guarantee.</p>
+                            </center>
+                        </div>
+                        <div class="col-md-6">
+                            <center>
+                                <div style="height: 200px;">
+                                    <img src="https://www.clearvin.com/img/nmvtis_logo_only.svg" alt="" style="margin-top: 50px;">
                                 </div>
-                            </div>
-
-                            <div class="business_item">
-                                <div class="business_img">
-                                    <img src="{{asset('landing/images/about-img1.jpg')}}" alt="" />
-                                </div>
-                            </div>
+                                
+                                <h3>Official Source</h3>
+                                <p>ClearVin is an Approved NMVTIS Data Provider. The National Motor Vehicle Title Information System (NMVTIS) is a program of the U.S. Department of Justice. This program protects you from fraud and unsafe vehicles. There is no more accurate and complete source for VIN data.</p>
+                            </center>
+                            
                         </div>
                     </div>
                 </div>
                 
                 <div class="col-md-6">
                     <div class="business_item sm-m-top-50">
-                        <h2 class="text-uppercase"><strong>Made</strong> is Template For Business</h2>
+                        <h2 class="text-uppercase">VINDATA RECORD WILL INCLUDE</h2>
                         <ul>
                             <li><i class="fa fa-arrow-circle-right"></i> Title and Brand History</li>
                             <li><i class="fa  fa-arrow-circle-right"></i> Insurance Claim Information</li>
@@ -97,264 +99,12 @@
 </section><!-- End off Business section -->
 
 
-<!--product section-->
-<section id="product" class="product">
-    <div class="container">
-        <div class="main_product roomy-80">
-            <div class="head_title text-center fix">
-                <h2 class="text-uppercase">What Client Say</h2>
-                <h5>Clean and Modern design is our best specialist</h5>
-            </div>
-
-            <div class="row">
-                <div class="col-md-6">
-                    <center>
-                        <div style="height: 200px;">
-                            <img src="https://www.clearvin.com/img/security-badge.png" alt="">
-                        </div>
-                        
-                        <h3>Safe and Secure 100% Guarantee</h3>
-                        <p>When you’re in the market for a used car, it’s important to arm yourself with the best information available to make the right decision. With ClearVin you will instantly get accurate information for the lowest price around!
-                            Read about our 100% Money Back Guarantee.</p>
-                    </center>
-                </div>
-                <div class="col-md-6">
-                    <center>
-                        <div style="height: 200px;">
-                            <img src="https://www.clearvin.com/img/nmvtis_logo_only.svg" alt="" style="margin-top: 50px;">
-                        </div>
-                        
-                        <h3>Official Source</h3>
-                        <p>ClearVin is an Approved NMVTIS Data Provider. The National Motor Vehicle Title Information System (NMVTIS) is a program of the U.S. Department of Justice. This program protects you from fraud and unsafe vehicles. There is no more accurate and complete source for VIN data.</p>
-                    </center>
-                    
-                </div>
-            </div>
-
-            {{-- <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-                <!-- Indicators -->
-                <ol class="carousel-indicators">
-                    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-                    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-                    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
-                </ol>
-
-                <!-- Wrapper for slides -->
-                <div class="carousel-inner" role="listbox">
-                    <div class="item active">
-                        <div class="container">
-                            <div class="row">
-                                <div class="col-sm-3">
-                                    <div class="port_item xs-m-top-30">
-                                        <div class="port_img">
-                                            <img src="{{asset('landing/images/work-img1.jpg')}}" alt="" />
-                                            <div class="port_overlay text-center">
-                                                <a href="{{asset('landing/images/work-img1.jpg')}}" class="popup-img">+</a>
-                                            </div>
-                                        </div>
-                                        <div class="port_caption m-top-20">
-                                            <h5>Your Work Title</h5>
-                                            <h6>- Graphic Design</h6>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-sm-3">
-                                    <div class="port_item xs-m-top-30">
-                                        <div class="port_img">
-                                            <img src="{{asset('landing/images/work-img2.jpg')}}" alt="" />
-                                            <div class="port_overlay text-center">
-                                                <a href="{{asset('landing/images/work-img2.jpg')}}" class="popup-img">+</a>
-                                            </div>
-                                        </div>
-                                        <div class="port_caption m-top-20">
-                                            <h5>Your Work Title</h5>
-                                            <h6>- Graphic Design</h6>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-sm-3">
-                                    <div class="port_item xs-m-top-30">
-                                        <div class="port_img">
-                                            <img src="{{asset('landing/images/work-img3.jpg')}}" alt="" />
-                                            <div class="port_overlay text-center">
-                                                <a href="{{asset('landing/images/work-img3.jpg')}}" class="popup-img">+</a>
-                                            </div>
-                                        </div>
-                                        <div class="port_caption m-top-20">
-                                            <h5>Your Work Title</h5>
-                                            <h6>- Graphic Design</h6>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-sm-3">
-                                    <div class="port_item xs-m-top-30">
-                                        <div class="port_img">
-                                            <img src="{{asset('landing/images/work-img4.jpg')}}" alt="" />
-                                            <div class="port_overlay text-center">
-                                                <a href="{{asset('landing/images/work-img4.jpg')}}" class="popup-img">+</a>
-                                            </div>
-                                        </div>
-                                        <div class="port_caption m-top-20">
-                                            <h5>Your Work Title</h5>
-                                            <h6>- Graphic Design</h6>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="item">
-                        <div class="container">
-                            <div class="row">
-                                <div class="col-sm-3">
-                                    <div class="port_item xs-m-top-30">
-                                        <div class="port_img">
-                                            <img src="{{asset('landing/images/work-img1.jpg')}}" alt="" />
-                                            <div class="port_overlay text-center">
-                                                <a href="{{asset('landing/images/work-img1.jpg')}}" class="popup-img">+</a>
-                                            </div>
-                                        </div>
-                                        <div class="port_caption m-top-20">
-                                            <h5>Your Work Title</h5>
-                                            <h6>- Graphic Design</h6>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-sm-3">
-                                    <div class="port_item xs-m-top-30">
-                                        <div class="port_img">
-                                            <img src="{{asset('landing/images/work-img2.jpg')}}" alt="" />
-                                            <div class="port_overlay text-center">
-                                                <a href="{{asset('landing/images/work-img2.jpg')}}" class="popup-img">+</a>
-                                            </div>
-                                        </div>
-                                        <div class="port_caption m-top-20">
-                                            <h5>Your Work Title</h5>
-                                            <h6>- Graphic Design</h6>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-sm-3">
-                                    <div class="port_item xs-m-top-30">
-                                        <div class="port_img">
-                                            <img src="{{asset('landing/images/work-img3.jpg')}}" alt="" />
-                                            <div class="port_overlay text-center">
-                                                <a href="{{asset('landing/images/work-img3.jpg')}}" class="popup-img">+</a>
-                                            </div>
-                                        </div>
-                                        <div class="port_caption m-top-20">
-                                            <h5>Your Work Title</h5>
-                                            <h6>- Graphic Design</h6>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-sm-3">
-                                    <div class="port_item xs-m-top-30">
-                                        <div class="port_img">
-                                            <img src="{{asset('landing/images/work-img4.jpg')}}" alt="" />
-                                            <div class="port_overlay text-center">
-                                                <a href="{{asset('landing/images/work-img4.jpg')}}" class="popup-img">+</a>
-                                            </div>
-                                        </div>
-                                        <div class="port_caption m-top-20">
-                                            <h5>Your Work Title</h5>
-                                            <h6>- Graphic Design</h6>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="item">
-                        <div class="container">
-                            <div class="row">
-                                <div class="col-sm-3">
-                                    <div class="port_item xs-m-top-30">
-                                        <div class="port_img">
-                                            <img src="{{asset('landing/images/work-img1.jpg')}}" alt="" />
-                                            <div class="port_overlay text-center">
-                                                <a href="{{asset('landing/images/work-img1.jpg')}}" class="popup-img">+</a>
-                                            </div>
-                                        </div>
-                                        <div class="port_caption m-top-20">
-                                            <h5>Your Work Title</h5>
-                                            <h6>- Graphic Design</h6>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-sm-3">
-                                    <div class="port_item xs-m-top-30">
-                                        <div class="port_img">
-                                            <img src="{{asset('landing/images/work-img2.jpg')}}" alt="" />
-                                            <div class="port_overlay text-center">
-                                                <a href="{{asset('landing/images/work-img2.jpg')}}" class="popup-img">+</a>
-                                            </div>
-                                        </div>
-                                        <div class="port_caption m-top-20">
-                                            <h5>Your Work Title</h5>
-                                            <h6>- Graphic Design</h6>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-sm-3">
-                                    <div class="port_item xs-m-top-30">
-                                        <div class="port_img">
-                                            <img src="{{asset('landing/images/work-img3.jpg')}}" alt="" />
-                                            <div class="port_overlay text-center">
-                                                <a href="{{asset('landing/images/work-img3.jpg')}}" class="popup-img">+</a>
-                                            </div>
-                                        </div>
-                                        <div class="port_caption m-top-20">
-                                            <h5>Your Work Title</h5>
-                                            <h6>- Graphic Design</h6>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-sm-3">
-                                    <div class="port_item xs-m-top-30">
-                                        <div class="port_img">
-                                            <img src="{{asset('landing/images/work-img4.jpg')}}" alt="" />
-                                            <div class="port_overlay text-center">
-                                                <a href="{{asset('landing/images/work-img4.jpg')}}" class="popup-img">+</a>
-                                            </div>
-                                        </div>
-                                        <div class="port_caption m-top-20">
-                                            <h5>Your Work Title</h5>
-                                            <h6>- Graphic Design</h6>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-
-                <!-- Controls -->
-                <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
-                    <i class="fa fa-angle-left" aria-hidden="true"></i>
-                    <span class="sr-only">Previous</span>
-                </a>
-
-                <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
-                    <i class="fa fa-angle-right" aria-hidden="true"></i>
-                    <span class="sr-only">Next</span>
-                </a>
-            </div> --}}
-        </div><!-- End off row -->
-    </div><!-- End off container -->
-</section><!-- End off Product section -->
-
-
-
 <!--Test section-->
-<section id="test" class="test bg-grey roomy-60 fix">
+<section id="test" class="product">
     <div class="container">
         <div class="row">                        
             <div class="main_test fix">
-
+                <br>
                 <div class="col-md-12 col-sm-12 col-xs-12">
                     <div class="head_title text-center fix">
                         <h2 class="text-uppercase">What Client Say</h2>
