@@ -51,7 +51,7 @@
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
                 <i class="fa fa-bars"></i>
             </button>
-            <a class="navbar-brand" href="#brand">
+            <a class="navbar-brand" href="/">
                 <img src="{{asset('landing/images/logo.png')}}" class="logo" alt="">
                 <!--<img src="assets/images/footer-logo.png" class="logo logo-scrolled" alt="">-->
             </a>
@@ -76,9 +76,7 @@
             <ul class="nav navbar-nav navbar-right">
                 <li><a href="#home">Home</a></li>                    
                 <li><a href="#features">About</a></li>
-                <li><a href="#business">Service</a></li>
-                <li><a href="#work">Portfolio</a></li>
-                <li><a href="#test">Blog</a></li>
+                <li><a href="#testimonial">Testimonials</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </div><!-- /.navbar-collapse -->

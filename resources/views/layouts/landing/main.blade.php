@@ -43,6 +43,11 @@
         <link rel="stylesheet" href="{{asset('landing/css/responsive.css')}}" />
 
         <script src="{{asset('landing/js/vendor/modernizr-2.8.3-respond-1.4.2.min.js')}}"></script>
+        <style>
+            .white-text > h1, .white-text > h2, .white-text > h3, .white-text > h4, .white-text > h5, .white-text > h6, .white-text > p, .white-text > span, .white-text {
+                color: white;
+            }
+        </style>
     </head>
 
     <body data-spy="scroll" data-target=".navbar-collapse">
@@ -78,11 +83,23 @@
 
 
 
-            @include('layouts.landing.footer')
+            {{-- @include('layouts.landing.footer') --}}
 
 
 
 
+            <div class="main_footer fix bg-mega text-center p-top-40 p-bottom-30 m-top-80">
+                <div class="col-md-12">
+                    <p class="wow fadeInRight" data-wow-duration="1s">
+                        Made 
+                        {{-- <i class="fa fa-heart"></i> --}}
+                        by 
+                        <a target="_blank" href="#">VinDataRecord</a> 
+                        2015.
+                    </p>
+                </div>
+            
+            </div>
         </div>
 
         <!-- JS includes -->
