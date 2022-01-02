@@ -87,7 +87,7 @@
                         <p class="m-top-20">Our reports give you comprehensive vehicle information that you can't get from a visual inspection or even a test drive. Our reports include title and brand history, insurance claim information, recall events, odometer accuracy, and more. When you want to know what you need to know, you can count on us.</p>
 
                         <div class="business_btn">
-                            <a href="https://bootstrapthemes.co" class="btn btn-default m-top-20">Read More</a>
+                            {{-- <a href="https://bootstrapthemes.co" class="btn btn-default m-top-20">Read More</a> --}}
                             <a href="" class="btn btn-primary m-top-20">Buy Now</a>
                         </div>
 
