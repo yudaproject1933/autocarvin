@@ -249,20 +249,10 @@
             <div class="col-md-12 col-sm-12 col-xs-12">
                 <div class="head_title text-center fix">
                     <h2 class="text-uppercase">Get In Touch</h2>
-                    <h5>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas accusantium, voluptate nulla ducimus error perferendis placeat laudantium illum deleniti omnis, eveniet reiciendis expedita, ratione harum accusamus quos consequuntur at voluptas!</h5>
+                    <h5>If you have any problems, Please contact in below :</h5>
                 </div>
             </div>
-            <div class="col-md-6">
-                <div class="sub-heading">
-                    <h4>Contact Address</h4>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet quos maxime voluptate doloribus, voluptatum nemo vel ipsa in eligendi, ullam. Ducimus consequuntur labore error hic.</p>
-                </div>
-                <address class="address">
-                    <hr>
-                    <p><i class="fa fa-envelope"></i> youremail@gmail.com</p>
-                </address>
-            </div>
-            <div class="col-md-6">
+            <div class="col-md-12">
                 <div class="form-group">
                     <form action="#" method="post" >
                         <div class="input-field form-group">
@@ -274,7 +264,7 @@
                         <div class="input-field form-group">
                             <textarea class="form-control" placeholder="Your Message" rows="3" name="message" required></textarea>
                         </div>
-                        <button class="btn btn-primary" type="submit">Send me</button>
+                        <button class="btn btn-primary" type="submit" style="float: right">Send me</button>
                     </form>
                 </div>
             </div>
