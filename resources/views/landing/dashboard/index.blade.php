@@ -11,7 +11,7 @@
                         <div class="slid_item">
                             <div class="home_text ">
                                 <h2 class="text-white">Vehicle History & VIN Lookup</h2>
-                                <h3 class="text-white">- Avoid costly problems by checking car history before you selling it. Enter VIN and get a vehicle report instantly -</h3>
+                                <h5 class="text-white">- Avoid costly problems by checking car history before you selling it. Enter VIN and get a vehicle report instantly -</h5>
                                 <div class="row">
                                     <div class="col-md-2"></div>
                                     <div class="col-md-8">

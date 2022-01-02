@@ -56,7 +56,7 @@
                                 </div>
                                 
                                 <h3>Safe and Secure 100% Guarantee</h3>
-                                <p>When you're in the market for a used car, it's important to arm yourself with the best information available to make the right decision. With ClearVin you will instantly get accurate information for the lowest price around!
+                                <p>When you're in the market for a used car, it's important to arm yourself with the best information available to make the right decision. With VinDataRecord you will instantly get accurate information for the lowest price around!
                                     Read about our 100% Money Back Guarantee.</p>
                             </center>
                         </div>
@@ -67,7 +67,7 @@
                                 </div>
                                 
                                 <h3>Official Source</h3>
-                                <p>ClearVin is an Approved NMVTIS Data Provider. The National Motor Vehicle Title Information System (NMVTIS) is a program of the U.S. Department of Justice. This program protects you from fraud and unsafe vehicles. There is no more accurate and complete source for VIN data.</p>
+                                <p>VinDataRecord is an Approved NMVTIS Data Provider. The National Motor Vehicle Title Information System (NMVTIS) is a program of the U.S. Department of Justice. This program protects you from fraud and unsafe vehicles. There is no more accurate and complete source for VIN data.</p>
                             </center>
                             
                         </div>
