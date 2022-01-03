@@ -12,5 +12,5 @@ class Transaction extends Model
     protected $table = 'transaction';
     public $timestamps = false; 
 
-    protected $fillable = ['vin','email','link_docs','status_payment','created_date','updated_date'];
+    protected $fillable = ['vin','email','phone','link_docs','status_payment','created_date','updated_date'];
 }

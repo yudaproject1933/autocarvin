@@ -52,9 +52,9 @@ class DashboardController extends Controller
             if ($status_payment !== '') {
                 $data_email = $data_email->where('status_payment',$status_payment);
             }
-            // else{
-            //     $data_email = $data_email->where('status_payment',"pending");
-            // }
+            else{
+                $data_email = $data_email->whereIn('status_payment',["pending","success"]);
+            }
 
             $data_email = $data_email->orderBy('created_date','DESC')->get();
             // dd($data_email);
@@ -87,14 +87,13 @@ class DashboardController extends Controller
 
     public function upload_report(Request $request)
     {
-        $file = $request->file('file_docs');
-        $name_file = $file->getClientOriginalName();
-
-        $path = Storage::putFileAs('/report',$file, $name_file);
-
-        // dd($path);
-        // $model = Transaction::where(['id' => $request->id_transaction])->first();
         $model = Transaction::findOrFail($request->id_transaction);
+
+        $file = $request->file('file_docs');
+        $name_file = $model->vin.".pdf";
+
+        $path = Storage::putFileAs('public/report',$file, $name_file);
+
         $model->update([
             'link_docs' => $path,
             'updated_date' => date('Y-m-d H:i:s')
@@ -125,6 +124,28 @@ class DashboardController extends Controller
             'updated_date' => date('Y-m-d H:i:s')
         ]);
 
+        return [
+            'success' => true,
+            'message' => "Email berhasil dikirim"
+        ];
+    }
+
+    public function contactUs(Request $request) 
+    {
+        $message_send = [
+            'name' => $request->name,
+            'email' => $request->email,
+            'message_body' => $request->message,
+        ];
+
+        $kirim = Mail::send('landing.dashboard.contact_us', ['body_message' => $message_send], function($message)
+                {
+                    $message->from('vindatarecord@gmail.com','Complaint Service')
+                        ->to('vindatarecord@gmail.com')
+                        ->subject('Complaint');
+                });
+        
+        // return redirect('/');
         return [
             'success' => true,
             'message' => "Email berhasil dikirim"

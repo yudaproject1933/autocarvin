@@ -74,6 +74,7 @@
                             <th>#</th>
                             <th>VIN</th>
                             <th>Email</th>
+                            <th>Phone</th>
                             <th>Link</th>
                             <th>Status Payment</th>
                             <th>Aksi</th>
@@ -89,6 +90,7 @@
                             <td>{{$no++;}}</td>
                             <td>{{$value['vin']}}</td>
                             <td>{{$value['email']}}</td>
+                            <td>{{$value['phone']}}</td>
                             <td>
                                 <a href="{{$path}}" target="_blank">{{is_null($value['link_docs']) ? '' : $path}}</a>
                             </td>

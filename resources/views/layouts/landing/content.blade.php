@@ -254,18 +254,18 @@
             </div>
             <div class="col-md-12">
                 <div class="form-group">
-                    <form action="#" method="post" >
+                    {{-- <form action="#" method="post" > --}}
                         <div class="input-field form-group">
-                            <input type="text" class="form-control" placeholder="Your Name" name="name" required>
+                            <input type="text" class="form-control" placeholder="Your Name" name="name" id="contact-name" required>
                         </div>
                         <div class="input-field form-group">
-                            <input type="email" class="form-control" placeholder="Email Address" name="email" required>
+                            <input type="email" class="form-control" placeholder="Email Address" name="email" id="contact-email" required>
                         </div>
                         <div class="input-field form-group">
-                            <textarea class="form-control" placeholder="Your Message" rows="3" name="message" required></textarea>
+                            <textarea class="form-control" placeholder="Your Message" rows="3" name="message" id="contact-message" required></textarea>
                         </div>
-                        <button class="btn btn-primary" type="submit" style="float: right">Send me</button>
-                    </form>
+                        <button class="btn btn-primary" onclick="contact_us()" style="float: right">Send me</button>
+                    {{-- </form> --}}
                 </div>
             </div>
         </div>

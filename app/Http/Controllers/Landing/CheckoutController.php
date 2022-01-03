@@ -88,18 +88,33 @@ class CheckoutController extends Controller
      */
     public function store(Request $request)
     {
-        // dd($request->status_payment);
-
-        $get_data = Transaction::where(['vin' => $request->vin,  'email' => $request->email, 'status_payment' => $request->status_payment])->first(); 
-        // dd($get_data);
-        if (is_null($get_data)) {
-            $model = Transaction::create([
-                'email' => $request->email,
-                'vin' => $request->vin,
-                'status_payment' => $request->status_payment,
-                'created_date' => date('Y-m-d H:i:s')
-            ]);
+        if ($request->status_payment == 'pending') {
+            $model = Transaction::where(['vin' => $request->vin,  'email' => $request->email, 'phone' => $request->phone, 'status_payment' => 'checkout'])->first(); 
+        
+            if (!is_null($model)) {
+                $model->update([
+                    'email' => $request->email,
+                    'phone' => $request->phone,
+                    'vin' => $request->vin,
+                    'status_payment' => $request->status_payment,
+                    'updated_date' => date('Y-m-d H:i:s')
+                ]);
+            }
+        }else{
+            $get_data = Transaction::where(['vin' => $request->vin,  'email' => $request->email, 'phone' => $request->phone, 'status_payment' => $request->status_payment])->first(); 
+            // dd($request->phone);
+            if (is_null($get_data)) {
+                $model = Transaction::create([
+                    'email' => $request->email,
+                    'phone' => $request->phone,
+                    'vin' => $request->vin,
+                    'status_payment' => $request->status_payment,
+                    'created_date' => date('Y-m-d H:i:s')
+                ]);
+            }
         }
+
+        
 
         
     }

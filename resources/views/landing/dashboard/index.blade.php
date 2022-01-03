@@ -23,7 +23,7 @@
                                             </div>
                                             <div class="row" style="margin-top: 10px;">
                                                 <div class="col-md-6">
-                                                    <img src="{{asset('landing/images/check.png')}}" alt="empty">
+                                                    <img src="{{asset('landing/images/check1.png')}}" alt="empty">
                                                 </div>
                                                 <div class="col-md-6">
                                                     <button class="btn btn-primary" style="float: right;"><i class="fa fa-search"></i> LOOKUP VIN RECORD</button>
@@ -51,4 +51,70 @@
 </section> <!--End off Home Sections-->
 
 @include('layouts.landing.content')
+@endsection
+
+@section('js')
+    <script>
+        function contact_us(){
+        var name = $('#contact-name').val();
+        var email = $('#contact-email').val();
+        var message = $('#contact-message').val();
+
+        if (name == '' || email == '' || message == '') {
+            Swal.fire('Please complate form to send message!!');
+        }else{
+            var data = {
+                name : name,
+                email : email,
+                message : message
+            };
+
+            Swal.fire({
+                title: 'Are you sure to send Message?',
+                text: "Please complate form",
+                icon: 'warning',
+                showCancelButton: true,
+                allowOutsideClick: false,
+                confirmButtonColor: '#3085d6',
+                cancelButtonColor: '#d33',
+                confirmButtonText: 'Yes, Send!',
+                showLoaderOnConfirm: true,
+                allowOutsideClick: () => !Swal.isLoading(),
+                preConfirm: function(){
+                    return $.ajax({
+                            headers: {
+                                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                            },
+                            url : "/contact-us",
+                            method : "POST",
+                            data: JSON.stringify(data),
+                            contentType: "application/json",
+                            dataType: "json",
+                            success : function (res) {
+                                if (res.success) {
+                                    Swal.fire({
+                                        title: 'Berhasil',
+                                        text: res.message,
+                                        icon: 'success',
+                                        showCancelButton: true,
+                                        confirmButtonColor: '#3085d6',
+                                        cancelButtonColor: '#d33',
+                                        confirmButtonText: 'oke'
+                                        }).then((result) => {
+                                            if (result.isConfirmed) {
+                                                location.reload();
+                                            }else{
+                                                location.reload();
+                                            }
+                                    });
+                                }
+                            },
+                            error:function (xhr) {  
+                            }
+                        });
+                }
+            });
+        }
+    }
+    </script>
 @endsection

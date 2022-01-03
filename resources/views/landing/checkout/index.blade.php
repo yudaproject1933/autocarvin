@@ -56,15 +56,21 @@
                                                 </div>
                                             </div>
                                             <div class="form-group row">
+                                                <label class="col-sm-2 col-form-label">Phone<b style="color: red;">*</b></label>
                                                 <div class="col-sm-10">
-                                                    <input type="checkbox" id="validate" disabled onclick="create_transaction();"> <label for="validate"><b> Please Confrim id your email is correct!</b></label> 
+                                                    <input type="text" class="form-control" placeholder="123123" id="phone" value="{{ isset($phone) ? $phone : '' }}">
+                                                </div>
+                                            </div>
+                                            <div class="form-group row">
+                                                <div class="col-sm-12">
+                                                    <input type="checkbox" id="validate" disabled onclick="create_transaction();"> <label for="validate" style="font-size: 9pt;"><b> Please confirm if your email and phone are correct! and to proceed with payment</b></label> 
                                                 </div>
                                             </div>
                                             <p><i class="fa fa-info-circle"></i> Before making a payment, please make sure the email you entered is correct</p>
                                         </form>
                                     </div>
                                 </div>
-                                <div class="row">
+                                <div class="row" id="payments" style="display: none;">
                                     <div class="col-md-12">
                                         <p style="width: 100%;" id="payment-btn">
                                             <a class="btn btn-success" data-toggle="collapse" href="#multiCollapseExample1" role="button" aria-expanded="false" aria-controls="multiCollapseExample1" style="width: 100%;">Payment Method</a>
@@ -77,7 +83,9 @@
                                                             <div class="row">
                                                                 <div class="col-md-12">
                                                                     <h5>PayPal</h5>
-                                                                    <button class="btn btn-warning">PayPal</button>
+                                                                    <script src="{{asset('landing/js/vendor/jquery-1.11.2.min.js')}}"></script>
+                                                                    @include('landing.checkout.paypal.pp_yuda')
+                                                                    {{-- <button class="btn btn-warning">PayPal</button> --}}
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -171,9 +179,21 @@
 @section('js')
     <script>
         $( document ).ready(function() {
+            
             $("#email").keyup(function() {
                 var email = $('#email').val();
-                if (email != '' && validateEmail(this.value)) {
+                var phone = $('#phone').val();
+                if (email != '' && validateEmail(this.value) && phone != '') {
+                    $('#validate').prop('disabled',false);
+                }else{
+                    $('#validate').prop('disabled',true);
+                }
+            });
+
+            $("#phone").keyup(function() {
+                var email = $('#email').val();
+                var phone = $('#phone').val();
+                if (email != '' && phone != '') {
                     $('#validate').prop('disabled',false);
                 }else{
                     $('#validate').prop('disabled',true);
@@ -192,10 +212,12 @@
 
         function create_transaction(){
             var email = $('#email').val();
-            if (email != '') {
+            var phone = $('#phone').val();
+            if (email != '' && phone != '') {
                 // $('#payment-btn').css({'display': ''});
                 var data = {
                     email : email,
+                    phone : phone,
                     vin : "<?=$_GET['vin']?>",
                     status_payment : "checkout",
                 };
@@ -216,6 +238,8 @@
                     error:function (xhr) {  
                     }
                 });
+
+                $('#payments').show();
             }
         }
     </script>
