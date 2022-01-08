@@ -56,7 +56,7 @@
                                 </div>
                                 
                                 <h3>Safe and Secure 100% Guarantee</h3>
-                                <p>When you're in the market for a used car, it's important to arm yourself with the best information available to make the right decision. With VinDataRecord you will instantly get accurate information for the lowest price around!
+                                <p>When you're in the market for a used car, it's important to arm yourself with the best information available to make the right decision. With VinData you will instantly get accurate information for the lowest price around!
                                     Read about our 100% Money Back Guarantee.</p>
                             </center>
                         </div>
@@ -67,7 +67,7 @@
                                 </div>
                                 
                                 <h3>Official Source</h3>
-                                <p>VinDataRecord is an Approved NMVTIS Data Provider. The National Motor Vehicle Title Information System (NMVTIS) is a program of the U.S. Department of Justice. This program protects you from fraud and unsafe vehicles. There is no more accurate and complete source for VIN data.</p>
+                                <p>VinData is an Approved NMVTIS Data Provider. The National Motor Vehicle Title Information System (NMVTIS) is a program of the U.S. Department of Justice. This program protects you from fraud and unsafe vehicles. There is no more accurate and complete source for VIN data.</p>
                             </center>
                             
                         </div>
@@ -76,7 +76,7 @@
                 
                 <div class="col-md-6">
                     <div class="business_item sm-m-top-50">
-                        <h2 class="text-uppercase">VINDATA RECORD WILL INCLUDE</h2>
+                        <h2 class="text-uppercase">VINDATA WILL INCLUDE</h2>
                         <ul>
                             <li><i class="fa fa-arrow-circle-right"></i> Title and Brand History</li>
                             <li><i class="fa  fa-arrow-circle-right"></i> Insurance Claim Information</li>
