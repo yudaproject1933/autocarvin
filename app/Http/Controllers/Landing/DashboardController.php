@@ -121,7 +121,7 @@ class DashboardController extends Controller
     public function sendEmail($id)
     {
         $model = Transaction::findOrFail($id);
-        $docs = Storage::get('public/report/'.$model['vin'].'.pdf');
+        // $docs = Storage::get('public/report/'.$model['vin'].'.pdf');
 
         //url('/').Storage::url($model['link_docs'])
         $details = [
