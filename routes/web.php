@@ -34,4 +34,7 @@ Route::group(['middleware' => 'auth'], function() {
     Route::post('/upload_report', 'App\Http\Controllers\Landing\DashboardController@upload_report');
     Route::post('/generate_report', 'App\Http\Controllers\Landing\DashboardController@generate_report');
     Route::get('/sendEmail/{id}', 'App\Http\Controllers\Landing\DashboardController@sendEmail');
+
+    //transaction
+    Route::resource('/transaction', 'App\Http\Controllers\Admin\TransactionController');
 });

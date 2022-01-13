@@ -112,16 +112,14 @@ class DashboardController extends Controller
         $data = Transaction::findOrFail($id);
         $data_vin = $data->vin;
 
-        // if ($vin == $data_vin) {
+        if ($vin == $data_vin) {
             $file = $data_vin.".blade.php";
             $file = Storage::get('public/bank_report/'.$file);
 
             return $file;
-        // }else{
-        //     $data['title'] = '404';
-        //     $data['name'] = 'Page not found';
-        //     return response()->view('errors.404',$data,404);
-        // }
+        }else{
+            return view('error404');
+        }
     }
 
     public function sendEmail($id)
