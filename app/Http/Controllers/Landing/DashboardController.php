@@ -78,11 +78,16 @@ class DashboardController extends Controller
         $vin = $data->vin;
     
         $file_name = $vin.'.blade.php';
-        $content_file = $request->content.' '.File::get(storage_path('setting_report/setting.blade.php'));
-        // $dir = Storage::put(storage_path('app/public/report/'.$file_name),$content_file);
-        // $dir = Storage::disk('local')->put('app/public/report/'.$file_name, $content_file);
+        $file = $request->content.' '.File::get(storage_path('setting_report/setting.blade.php'));
+
+        $dir = Storage::disk('local')->put('public/bank_report/'.$file_name, $file);
         
-        return $content_file;
+        $data->update([
+            'link_docs' => "/read_report/".$data->id."/".$vin,
+            'updated_date' => date('Y-m-d H:i:s')
+        ]);
+        
+        return redirect('/dashboard');
     }
 
     public function upload_report(Request $request)
@@ -102,16 +107,27 @@ class DashboardController extends Controller
         return redirect()->back();
     }
 
+    public function read_report($id, $vin)
+    {
+        $data = Transaction::findOrFail($id);
+        $vin = $data->vin;
+
+        $file = $vin.".blade.php";
+        $file = Storage::get('public/bank_report/'.$file);
+
+        return $file;
+    }
+
     public function sendEmail($id)
     {
         $model = Transaction::findOrFail($id);
         $docs = Storage::get('public/report/'.$model['vin'].'.pdf');
 
+        //url('/').Storage::url($model['link_docs'])
         $details = [
-            'title' => 'Mail From Premium Report',
-            'body' => 'test send email',
-            'link'  => url('/').Storage::url($model['link_docs']),
-            'docs_attach' => $docs,
+            'title' => 'Mail From Vin Data Record',
+            'body' => 'Report',
+            'link'  => url('/'),
             'docs_name' => '',
             'vin' => $model['vin'],
         ];

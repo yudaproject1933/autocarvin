@@ -24,6 +24,7 @@ Route::get('/check', 'App\Http\Controllers\Landing\CheckoutController@check');
 
 Route::post('/contact-us', 'App\Http\Controllers\Landing\DashboardController@contactUs');
 
+Route::get('/read_report/{id}/{vin}', 'App\Http\Controllers\Landing\DashboardController@read_report');
 // Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
 //     return view('dashboard');
 // })->name('dashboard');

@@ -92,11 +92,12 @@
                             <td>{{$value['email']}}</td>
                             <td>{{$value['phone']}}</td>
                             <td>
-                                <a href="{{$path}}" target="_blank">{{is_null($value['link_docs']) ? '' : $path}}</a>
+                                {{-- <a href="{{$path}}" target="_blank">{{is_null($value['link_docs']) ? '' : $path}}</a> --}}
+                                <a href="{{$value['link_docs']}}" target="_blank">{{is_null($value['link_docs']) ? '' : $value['link_docs']}}</a>
                             </td>
                             <td>{{$value['status_payment']}}</td>
                             <td>
-                                <button type="button" class="btn btn-success" title="Upload" onclick="updateData({{ $value['id'] }})"><i class="fa fa-file"></i></button>&nbsp;
+                                {{-- <button type="button" class="btn btn-success" title="Upload" onclick="updateData({{ $value['id'] }})"><i class="fa fa-file"></i></button>&nbsp; --}}
                                 <button type="button" class="btn btn-danger" title="Upload Script" onclick="generate({{ $value['id'] }})"><i class="fa fa-file"></i></button>&nbsp;
                                 <a class="btn btn-warning" title="Download Docs" href="https://www.autotrader.com/cars-for-sale/experian?SID=ATCbI8RQrUb0njwc6r&VIN={{$value['vin']}}&brand=atc&ps=true" target="_blank"><i class="fa fa-print"></i></a>&nbsp;
                                 <button class="btn btn-primary" title="Send Email" onclick="SendEmail({{$value['id']}})"><i class="fa fa-paper-plane"></i></button>

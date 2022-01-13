@@ -38,7 +38,7 @@
     $('.reportSection-tab').remove();
 
     // text sesudah title 
-    // $('.summary-header-section').remove();
+    $('.summary-header-section').remove();
 
     //logoautocheck
     $('.state-title-brand-img img').remove();
@@ -60,6 +60,8 @@
     $('.section-divider-text').eq(4).html('ODOMETER VERIFICATION');
     $('.section-divider-text').eq(5).html('SERVICES BULLETIN INFORMATION');
 
+    $('.accident-img').remove();
+    $('.section-divider').css({"background-color" : "#509677"});
     //link term
     $('.sectionSummaryText a').remove();
 
@@ -72,10 +74,10 @@
     //copyright
     $('footer').css({"text-align": "center"});
     // $('footer b').css({"margin-top": "50px"});
-    $('footer').append("<br/><br/><br/><br/><b style='margin-top : 50px;'>Copyright © Get Auto History. All rights reserved</b>");
+    $('footer').append("<br/><br/><br/><br/><b style='margin-top : 50px;'>Copyright © Vin Data. All rights reserved</b>");
 
     //replace all autocheck
-    // fx('AutoCheck','GetAutoHistory')
+    fx('AutoCheck','Vin Data');
 });
 function copy_url(){
     var $temp = $("<input>");
