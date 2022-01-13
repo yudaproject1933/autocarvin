@@ -110,24 +110,31 @@ class DashboardController extends Controller
     public function read_report($id, $vin)
     {
         $data = Transaction::findOrFail($id);
-        $vin = $data->vin;
+        $data_vin = $data->vin;
 
-        $file = $vin.".blade.php";
-        $file = Storage::get('public/bank_report/'.$file);
+        // if ($vin == $data_vin) {
+            $file = $data_vin.".blade.php";
+            $file = Storage::get('public/bank_report/'.$file);
 
-        return $file;
+            return $file;
+        // }else{
+        //     $data['title'] = '404';
+        //     $data['name'] = 'Page not found';
+        //     return response()->view('errors.404',$data,404);
+        // }
     }
 
     public function sendEmail($id)
     {
         $model = Transaction::findOrFail($id);
+        // dd(url('/')."/read_report/".$model->id."/".$model->vin);
         // $docs = Storage::get('public/report/'.$model['vin'].'.pdf');
 
         //url('/').Storage::url($model['link_docs'])
         $details = [
             'title' => 'Mail From Vin Data Record',
             'body' => 'Report',
-            'link'  => url('/'),
+            'link'  => url('/')."/read_report/".$model->id."/".$model->vin,
             'docs_name' => '',
             'vin' => $model['vin'],
         ];
