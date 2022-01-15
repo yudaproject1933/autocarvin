@@ -7,19 +7,20 @@
     // add tombol
     $('.fastlinkButton').append("<button class='btn btn-sm btn-primary' onclick='copy_url()'>Copy Link</button><p id='text-copy'></p>");
     //logo kiri
-    // $('.leftLogo').attr('src','http://vindatarecord.com/public/images/VINDATA RECORD.png'); 
+    // $('.leftLogo').attr('src','https://vindatarecord.com/public/images/VINDATA_RECORD.png'); 
     // $('.leftLogo').css({"width" : "150px"});
-    $('.leftLogo').after("<div class='report-run'></div>");
+    $('.leftLogo').after("<div class='report-run'><img src='https://vindatarecord.com/public/images/VINDATA_RECORD.png' style='width: 100px;'></div>");
     $('.leftLogo').remove();
     //logo kanan
-    $('.rightLogo').attr('src','http://vindatarecord.com/public/images/VINDATA_RECORD.png'); 
-    $('.rightLogo').css({"width" : "150px"});
+    // $('.rightLogo').attr('src','https://vindatarecord.com/public/images/VINDATA_RECORD.png'); 
+    // $('.rightLogo').css({"width" : "150px"});
+    $('.rightLogo').remove();
 
     //tulisan header
     $('.logo-title h1').html('Your Vin Data Record');
     $('.logo-title').css({"text-align": "center"});
 
-    // $('.rundate').css({"text-align": "center", "font-size": "16pt"});
+    $('.rundate').css({"padding-left": "0px"});
     $('.rundate').appendTo('.report-run');
 
     //background biru
