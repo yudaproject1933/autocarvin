@@ -13,9 +13,6 @@
   <script src="https://www.paypal.com/sdk/js?client-id=AcX2R8u0Jdsl_jgXWdrjpNgRtG8aLsFLpL3lMB-KjZvUIt-26IDYUh7XMy3facS94WjEBtdiOOfRQhqz&enable-funding=venmo&currency=USD" data-sdk-integration-source="button-factory"></script>
   <script>
     function initPayPalButton() {
-        var email = $('#email').val();
-        var phone = $('#phone').val();
-        var status_payment = "pending";
 
         var shipping = 0;
         var itemOptions = document.querySelector("#smart-button-container #item-options");
@@ -99,6 +96,13 @@
                 element.innerHTML = '<h3>Thanks for your order , the report will come to your email soon!</h3>';
 
                 // Or go to another URL:  actions.redirect('thank_you.html');
+
+                var email = $('#email').val();
+                var phone = $('#phone').val();
+                var status_payment = "pending";
+                console.log(email);
+                console.log(phone);
+                console.log(status_payment);
 
                 var data = {
                     vin : "<?=$_GET['vin']?>",

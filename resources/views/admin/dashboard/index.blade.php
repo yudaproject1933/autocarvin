@@ -77,6 +77,7 @@
                             <th>Phone</th>
                             <th>Link</th>
                             <th>Status Payment</th>
+                            <th>Created Date</th>
                             <th>Aksi</th>
                         </tr>
                     </thead>
@@ -96,6 +97,7 @@
                                 <a href="{{$value['link_docs']}}" target="_blank">{{is_null($value['link_docs']) ? '' : $value['link_docs']}}</a>
                             </td>
                             <td>{{$value['status_payment']}}</td>
+                            <td>{{$value['created_date']}}</td>
                             <td>
                                 {{-- <button type="button" class="btn btn-success" title="Upload" onclick="updateData({{ $value['id'] }})"><i class="fa fa-file"></i></button>&nbsp; --}}
                                 <button type="button" class="btn btn-danger" title="Upload Script" onclick="generate({{ $value['id'] }})"><i class="fa fa-file"></i></button>&nbsp;

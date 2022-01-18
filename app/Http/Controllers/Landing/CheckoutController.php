@@ -91,7 +91,7 @@ class CheckoutController extends Controller
         if ($request->status_payment == 'pending') {
             $model = Transaction::where(['vin' => $request->vin,  'email' => $request->email, 'phone' => $request->phone, 'status_payment' => 'checkout'])->first(); 
         
-            if (!empty($model)) {
+            if ($model) {
                 $model->update([
                     'email' => $request->email,
                     'phone' => $request->phone,
