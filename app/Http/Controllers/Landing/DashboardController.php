@@ -52,7 +52,7 @@ class DashboardController extends Controller
             if ($status_payment !== '') {
                 $data_email = $data_email->where('status_payment',$status_payment);
             }else{
-                $data_email = $data_email->whereIn('status_payment',["pending","checkout"]);
+                $data_email = $data_email->whereIn('status_payment',["pending","success"]);
             }
 
             $data_email = $data_email->orderBy('created_date','DESC')->get();
