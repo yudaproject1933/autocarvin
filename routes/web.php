@@ -31,9 +31,9 @@ Route::get('/read_report/{id}/{vin}', 'App\Http\Controllers\Landing\DashboardCon
 
 Route::group(['middleware' => 'auth'], function() {
     //dashboard
-    Route::post('/upload_report', 'App\Http\Controllers\Landing\DashboardController@upload_report');
-    Route::post('/generate_report', 'App\Http\Controllers\Landing\DashboardController@generate_report');
-    Route::get('/sendEmail/{id}', 'App\Http\Controllers\Landing\DashboardController@sendEmail');
+    Route::post('/upload_report', 'App\Http\Controllers\Admin\TransactionController@upload_report');
+    Route::post('/generate_report', 'App\Http\Controllers\Admin\TransactionController@generate_report');
+    Route::get('/sendEmail/{id}', 'App\Http\Controllers\Admin\TransactionController@sendEmail');
 
     //transaction
     Route::resource('/transaction', 'App\Http\Controllers\Admin\TransactionController');
