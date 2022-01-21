@@ -220,6 +220,7 @@
                     phone : phone,
                     vin : "<?=$_GET['vin']?>",
                     status_payment : "checkout",
+                    _token: "{{ csrf_token() }}"
                 };
                 $.ajax({
                     headers: {
