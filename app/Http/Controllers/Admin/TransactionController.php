@@ -190,7 +190,16 @@ class TransactionController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        // dd($request->status_payment);
+        $model = Transaction::create([
+            'email' => $request->email,
+            'phone' => $request->phone,
+            'vin' => $request->vin,
+            'status_payment' => $request->status_payment,
+            'created_date' => date('Y-m-d H:i:s')
+        ]);
+
+        return redirect('/transaction');
     }
 
     /**

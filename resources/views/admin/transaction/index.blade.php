@@ -48,8 +48,10 @@
                         </form>
                         <hr>
                     </div>
+                    <button class="btn btn-success float-md-left" onclick="tambah()"><i class="fa fa-plus"></i> Tambah</button>
                 </div>
               </div>
+              
               <!-- /.card-header -->
               <div class="card-body">
                 <table id="example2" class="table table-bordered table-hover" width="100%">
@@ -160,24 +162,93 @@
       </div>
   </div>
 </div>
+
+<div class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" id="modal-tambah">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+        <div class="modal-header">
+                <h5 class="modal-title" id="modal-judul">Tambah Data</h5>
+                <!-- <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+                </button> -->
+            </div>
+            <div class="modal-body">
+                <form class="form-group" method="POST" action="{{route('transaction.store')}}" enctype="multipart/form-data" id="form-tambah">
+                    @csrf 
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="col-md-12">
+                                <label for="vin">VIN :</label><br>
+                            </div>
+                            <div class="col-md-12">
+                                <input type="text" name="vin" id="vin" class="form-control" minlength="17" maxlength="17" placeholder="Enter 17 Character VIN Number" required style="text-transform: uppercase;">
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <div class="col-md-12">
+                                <label for="email">Email :</label><br>
+                            </div>
+                            <div class="col-md-12">
+                                <input type="email" name="email" id="email" class="form-control" placeholder="abcdefg@gmail.com" required>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <div class="col-md-12">
+                                <label for="phone">Phone :</label><br>
+                            </div>
+                            <div class="col-md-12">
+                                <input type="text" name="phone" id="phone" class="form-control" placeholder="123456" required>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <div class="col-md-12">
+                                <label for="status_payment">Status Payment :</label><br>
+                            </div>
+                            <div class="col-md-12">
+                                <select name="status_payment" id="status_payment" class="form-control">
+                                    <option value="">--Pilih--</option>
+                                    <option value="checkout">Checkout</option>
+                                    <option value="pending">Pending</option>
+                                    <option value="success">Success</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-primary" type="submit"><i class="fa fa-save"></i> Save</button>
+                </form>
+            </div>        
+                
+        </div>
+    </div>
+  </div>
 @endsection
 
 @section('js')
 <script>
   $(document).ready(function() {
-        $('#example2').DataTable({
+    $('#example2').DataTable({
             "scrollX": true
         });
     } );
+
+    function tambah(){
+        $('#modal-tambah').modal('toggle');
+    }
+
     function updateData(id){
         
         $('#id_transaction').val(id);
         
-        $('#modal-update').modal('toggle')
+        $('#modal-update').modal('toggle');
     }
     function generate(id){
         $('#id_email').val(id);
-        $('#modal-upload').modal('toggle')
+        $('#modal-upload').modal('toggle');
     }
 
     function SendEmail(id){

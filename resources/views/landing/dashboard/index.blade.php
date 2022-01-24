@@ -18,7 +18,7 @@
                                         <form action="/check" method="GET">
                                             <div class="row">
                                                 <div class="col-md-12">
-                                                    <input type="text" name="vin" class="form-control" minlength="17" maxlength="17" name="vin" placeholder="Enter 17 Character VIN Number" required style="text-transform: uppercase;" >
+                                                    <input type="text" class="form-control" minlength="17" maxlength="17" name="vin" placeholder="Enter 17 Character VIN Number" required style="text-transform: uppercase;" >
                                                 </div>
                                             </div>
                                             <div class="row" style="margin-top: 10px;">
