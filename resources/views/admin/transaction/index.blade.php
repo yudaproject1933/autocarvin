@@ -49,6 +49,7 @@
                         <hr>
                     </div>
                     <button class="btn btn-success float-md-left" onclick="tambah()"><i class="fa fa-plus"></i> Tambah</button>
+                    <a href="/export_excel?start_date=2021-09-29&end_date=" style="margin-left: 10px;" class="btn btn-primary"  id="btn-export" onclick="export_excel()"><i class="fa fa-file"></i> Export to Excel</a>
                 </div>
               </div>
               
@@ -332,7 +333,7 @@
         var end_date = $('#end_date').val();
         var status_payment = $('#status_payment').val();
         
-        $("#btn-export").attr("href", "/export?start_date="+start_date+"&end_date="+end_date+"&status_payment="+status_payment);
+        $("#btn-export").attr("href", "/export_excel?start_date="+start_date+"&end_date="+end_date+"&status_payment="+status_payment);
     }
 </script>
 @endsection

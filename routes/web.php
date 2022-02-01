@@ -37,4 +37,5 @@ Route::group(['middleware' => 'auth'], function() {
 
     //transaction
     Route::resource('/transaction', 'App\Http\Controllers\Admin\TransactionController');
+    Route::get('/export_excel', 'App\Http\Controllers\Admin\TransactionController@export_excel');
 });

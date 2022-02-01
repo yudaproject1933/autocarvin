@@ -6,6 +6,9 @@ use File;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
+use App\Exports\TransactionExport;
+use Maatwebsite\Excel\Facades\Excel;
+
 use App\Models\Transaction;
 
 use Illuminate\Support\Facades\Storage;
@@ -245,5 +248,17 @@ class TransactionController extends Controller
     public function destroy($id)
     {
         //
+    }
+
+    public function export_excel()
+    {
+        $start_date = $_GET['start_date'] !== '' ? $_GET['start_date'] : '';
+        $end_date = $_GET['end_date'] !== '' ? $_GET['end_date'] : '';
+        $status_payment = $_GET['status_payment'] !== '' ? $_GET['status_payment'] : 'success';
+        // dd($status_payment);
+
+        $filename = 'report_'.$start_date.'_to_'.$end_date.'.xlsx';
+        
+        return Excel::download(new TransactionExport($start_date, $end_date, $status_payment), $filename);
     }
 }
