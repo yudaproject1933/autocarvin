@@ -19,7 +19,7 @@
   <!-- /.login-logo -->
   <div class="card card-outline card-primary">
     <div class="card-header text-center">
-      <a href="/login" class="h1"><b>VinData</b>Record</a>
+      <a href="/login" class="h1"><b>VinCheck</b>Record</a>
     </div>
     <div class="card-body">
       <p class="login-box-msg">Sign in to start your session</p>
