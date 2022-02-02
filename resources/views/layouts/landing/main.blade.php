@@ -5,7 +5,7 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
     <head>
         <meta charset="utf-8">
-        <title>VindataRecord</title>
+        <title>Vin Check Records</title>
         <meta name="csrf-token" content="{{ csrf_token() }}" />
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
