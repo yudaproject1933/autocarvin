@@ -70,7 +70,7 @@
             };
 
             Swal.fire({
-                title: 'Are you sure to send Message?',
+                title: 'Make sure you put the correct email address?',
                 text: "Please complate form",
                 icon: 'warning',
                 showCancelButton: true,
@@ -93,7 +93,7 @@
                             success : function (res) {
                                 if (res.success) {
                                     Swal.fire({
-                                        title: 'Berhasil',
+                                        title: 'Success',
                                         text: res.message,
                                         icon: 'success',
                                         showCancelButton: true,

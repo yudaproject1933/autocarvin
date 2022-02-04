@@ -169,7 +169,7 @@ class DashboardController extends Controller
         // return redirect('/');
         return [
             'success' => true,
-            'message' => "Email berhasil dikirim"
+            'message' => "It's sent ! We will respond immediately to your email address."
         ];
     }
 
