@@ -163,8 +163,8 @@ class TransactionController extends Controller
 
         $kirim = Mail::send('landing.dashboard.contact_us', ['body_message' => $message_send], function($message)
                 {
-                    $message->from('vindatarecord@gmail.com','Complaint Service')
-                        ->to('Vincheckrecord@gmail.com')
+                    $message->from('vincheckrecord@gmail.com','Complaint Service')
+                        ->to('vincheckrecord@gmail.com')
                         ->subject('Complaint');
                 });
         
