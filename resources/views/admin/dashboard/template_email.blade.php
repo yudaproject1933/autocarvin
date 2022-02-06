@@ -16,7 +16,7 @@
     <span>If you have any question, you can reply this message to get in touch with us.</span> --}}
     <h4>Dear customer,</h4>
     {{-- <p>Thanks for your order, a copy of your report is attached. You may also view the report through the <a href="{{ $details['link'] }}" target="_blank"></a> :</p> --}}
-    <p>Thanks for your order, a copy of your report is attached. You may also view the report online <a href="{{ $details['link'] }}" target="_blank"></a>.</p>
+    <p>Thanks for your order, a copy of your report is attached. You may also view the report online <a href="{{ $details['link'] }}" target="_blank">here</a>.</p>
     {{-- {{ $details['link'] }}<br> --}}
     <span>If you have any question , please just reply this message to get in touch with us.</span>
 </body>
