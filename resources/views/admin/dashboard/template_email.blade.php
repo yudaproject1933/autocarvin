@@ -15,7 +15,7 @@
     <br>
     <span>If you have any question, you can reply this message to get in touch with us.</span> --}}
     <h4>Dear customer,</h4>
-    <p>Thanks for your order, now your completed report is available on the  link below:</p>
+    <p>Thanks for your order, a copy of your report is attached. You may also view the report through the link below :</p>
     {{ $details['link'] }}<br>
     <span>If you have any question , please just reply this message to get in touch with us.</span>
 </body>

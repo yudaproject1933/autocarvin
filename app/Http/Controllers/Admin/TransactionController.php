@@ -98,11 +98,15 @@ class TransactionController extends Controller
 
         $file = $request->file('file_docs');
         $name_file = $model->vin.".pdf";
+        
+        $path = 'public/report/' . $name_file;
+        Storage::disk('local')->put($path, file_get_contents($file));
 
-        $path = Storage::putFileAs('public/report',$file, $name_file);
-
+        // $model->update([
+        //     'link_docs' => $path,
+        //     'updated_date' => date('Y-m-d H:i:s')
+        // ]);
         $model->update([
-            'link_docs' => $path,
             'updated_date' => date('Y-m-d H:i:s')
         ]);
 

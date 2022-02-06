@@ -86,10 +86,10 @@
                           <td>{{$value['status_payment']}}</td>
                           <td>{{$value['created_date']}}</td>
                           <td>
-                              {{-- <button type="button" class="btn btn-success" title="Upload" onclick="updateData({{ $value['id'] }})"><i class="fa fa-file"></i></button>&nbsp; --}}
-                              <button type="button" class="btn btn-danger" title="Upload Script" onclick="generate({{ $value['id'] }})"><i class="fa fa-file"></i></button>&nbsp;
-                              <a class="btn btn-warning" title="Download Docs" href="https://www.autotrader.com/cars-for-sale/experian?SID=ATCbI8RQrUb0njwc6r&VIN={{$value['vin']}}&brand=atc&ps=true" target="_blank"><i class="fa fa-print"></i></a>&nbsp;
-                              <button class="btn btn-primary" title="Send Email" onclick="SendEmail({{$value['id']}})"><i class="fa fa-paper-plane"></i></button>
+                            <a class="btn btn-warning" title="Download Docs" href="https://www.autotrader.com/cars-for-sale/experian?SID=ATCbI8RQrUb0njwc6r&VIN={{$value['vin']}}&brand=atc&ps=true" target="_blank"><i class="fa fa-print"></i></a>&nbsp;
+                            <button type="button" class="btn btn-danger" title="Upload Script" onclick="generate({{ $value['id'] }})"><i class="fa fa-file"></i></button>&nbsp;
+                            <button type="button" class="btn btn-success" title="Upload" onclick="updateData({{ $value['id'] }})"><i class="fa fa-file"></i></button>&nbsp;  
+                            <button class="btn btn-primary" title="Send Email" onclick="SendEmail({{$value['id']}})"><i class="fa fa-paper-plane"></i></button>
                           </td>
                       </tr>
                     @endforeach
@@ -110,7 +110,7 @@
     <!-- /.content -->
 
     <!-- modal -->
-<div class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" id="modal-update">
+<div class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" id="modal-update-report">
   <div class="modal-dialog modal-lg">
   <div class="modal-content">
   <div class="modal-header">
@@ -245,7 +245,7 @@
         
         $('#id_transaction').val(id);
         
-        $('#modal-update').modal('toggle');
+        $('#modal-update-report').modal('toggle');
     }
     function generate(id){
         $('#id_email').val(id);

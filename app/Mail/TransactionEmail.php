@@ -34,7 +34,8 @@ class TransactionEmail extends Mailable
         // dd($this->details['link']);
         // return $this->subject('Test kirim email')->view('front.email');
         return $this->from('cs.getautorecord@gmail.com')
-            ->subject('Your order is complete')
+            ->subject('Your Vin Check History Report')
+            ->attachFromStorage('public/report/'.$this->details['vin'].'.pdf')
             ->view('admin.dashboard.template_email');
     }
 }
