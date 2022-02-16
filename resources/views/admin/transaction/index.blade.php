@@ -34,6 +34,7 @@
                                         <div class="col-sm-12">
                                             <select name="status_payment" id="status_payment" class="form-control" >
                                                 <option value="">--Pilih--</option>
+                                                <option value="visit" {{ isset($status_payment) && $status_payment == 'visit' ? 'selected' : '' }}>Visit</option>
                                                 <option value="checkout" {{ isset($status_payment) && $status_payment == 'checkout' ? 'selected' : '' }}>Checkout</option>
                                                 <option value="pending" {{ isset($status_payment) && $status_payment == 'pending' ? 'selected' : '' }}>Pending</option>
                                                 <option value="success" {{ isset($status_payment) && $status_payment == 'success' ? 'selected' : '' }}>Success</option>

@@ -179,7 +179,15 @@
 @section('js')
     <script>
         $( document ).ready(function() {
-            
+            var email = $('#email').val();
+            var phone = $('#phone').val();
+
+            if (email != '' && validateEmail(email) && phone != '') {
+                $('#validate').prop('disabled',false);
+            }else{
+                $('#validate').prop('disabled',true);
+            }
+
             $("#email").keyup(function() {
                 var email = $('#email').val();
                 var phone = $('#phone').val();

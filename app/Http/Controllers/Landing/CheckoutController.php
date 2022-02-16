@@ -22,6 +22,8 @@ class CheckoutController extends Controller
     public function check()
     {
         $vin = isset($_GET['vin']) != '' ? $_GET['vin'] : '';
+        $email = isset($_GET['email']) != '' ? $_GET['email'] : '';
+        $phone = isset($_GET['phone']) != '' ? $_GET['phone'] : '';
 
         $res = [];
         if (!empty($result['attributes'])) {
@@ -66,6 +68,19 @@ class CheckoutController extends Controller
         // $data[]
         // dd($data_preview);
 
+        $data['vin'] = $vin;
+        $data['email'] = $email;
+        $data['phone'] = $phone;
+
+        //insert
+        $model = Transaction::create([
+            'email' => $email,
+            'phone' => $phone,
+            'vin' => $vin,
+            'status_payment' => 'visit',
+            'created_date' => date('Y-m-d H:i:s')
+        ]);
+
         return view('landing.checkout.index', $data);
 
     }
@@ -101,9 +116,17 @@ class CheckoutController extends Controller
                 ]);
             }
         }else{
-            $get_data = Transaction::where(['vin' => $request->vin,  'email' => $request->email, 'phone' => $request->phone, 'status_payment' => $request->status_payment])->first(); 
+            $get_data = Transaction::where(['vin' => $request->vin,  'email' => $request->email, 'phone' => $request->phone, 'status_payment' => 'visit'])->first(); 
             // dd($request->phone);
-            if (is_null($get_data)) {
+            if ($get_data) {
+                $get_data->update([
+                    'email' => $request->email,
+                    'phone' => $request->phone,
+                    'vin' => $request->vin,
+                    'status_payment' => $request->status_payment,
+                    'updated_date' => date('Y-m-d H:i:s')
+                ]);
+            }else{
                 $model = Transaction::create([
                     'email' => $request->email,
                     'phone' => $request->phone,

@@ -18,7 +18,9 @@
                                         <form action="/check" method="GET">
                                             <div class="row">
                                                 <div class="col-md-12">
-                                                    <input type="text" class="form-control" minlength="17" maxlength="17" name="vin" placeholder="Enter 17 Character VIN Number" required style="text-transform: uppercase;" >
+                                                    <input type="text" class="form-control" minlength="17" maxlength="17" name="vin" placeholder="Enter 17 Character VIN Number" required style="text-transform: uppercase;" ><br>
+                                                    <input type="email" name="email" id="email" class="form-control" placeholder="your_email@gmail.com"><br>
+                                                    <input type="text" name="phone" id="phone" class="form-control" placeholder="Phone Number">
                                                 </div>
                                             </div>
                                             <div class="row" style="margin-top: 10px;">
