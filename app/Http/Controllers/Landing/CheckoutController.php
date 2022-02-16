@@ -77,7 +77,7 @@ class CheckoutController extends Controller
             'email' => $email,
             'phone' => $phone,
             'vin' => $vin,
-            'status_payment' => 'visit',
+            'status_payment' => 'checkout',
             'created_date' => date('Y-m-d H:i:s')
         ]);
 

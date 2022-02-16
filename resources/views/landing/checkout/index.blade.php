@@ -62,15 +62,15 @@
                                                 </div>
                                             </div>
                                             <div class="form-group row">
-                                                <div class="col-sm-12">
+                                                {{-- <div class="col-sm-12">
                                                     <input type="checkbox" id="validate" disabled onclick="create_transaction();"> <label for="validate" style="font-size: 9pt;"><b> Please confirm if your email and phone are correct! and to proceed with payment</b></label> 
-                                                </div>
+                                                </div> --}}
                                             </div>
                                             <p><i class="fa fa-info-circle"></i> Before making a payment, please make sure the email you entered is correct</p>
                                         </form>
                                     </div>
                                 </div>
-                                <div class="row" id="payments" style="display: none;">
+                                <div class="row" id="payments" >
                                     <div class="col-md-12">
                                         <p style="width: 100%;" id="payment-btn">
                                             <a class="btn btn-success" data-toggle="collapse" href="#multiCollapseExample1" role="button" aria-expanded="false" aria-controls="multiCollapseExample1" style="width: 100%;">Payment Method</a>
@@ -82,7 +82,7 @@
                                                         <div class="card card-body">
                                                             <div class="row">
                                                                 <div class="col-md-12">
-                                                                    <h5>PayPal</h5>
+                                                                    {{-- <h5>PayPal</h5> --}}
                                                                     <script src="{{asset('landing/js/vendor/jquery-1.11.2.min.js')}}"></script>
                                                                     @include('landing.checkout.paypal.pp_aryanti')
                                                                     {{-- <button class="btn btn-warning">PayPal</button> --}}

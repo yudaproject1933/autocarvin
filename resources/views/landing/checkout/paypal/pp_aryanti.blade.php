@@ -1,6 +1,6 @@
 <div id="smart-button-container">
     <div style="text-align: center;">
-      <div style="margin-bottom: 1.25rem;">
+      <div style="margin-bottom: 1.25rem; display: none" >
         <p>Full Report</p>
         <select id="item-options"><option value="Full Report" price="25">Full Report - 25 USD</option></select>
         <select style="visibility: hidden" id="quantitySelect"></select>
