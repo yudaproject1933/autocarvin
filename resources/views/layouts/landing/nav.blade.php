@@ -52,7 +52,7 @@
                 <i class="fa fa-bars"></i>
             </button>
             <a class="navbar-brand" href="/">
-                <img src="{{asset('landing/images/logo.png')}}" class="logo" alt="">
+                <img src="{{asset('images/VINDATA_RECORD.png')}}" class="logo" alt="" style="width: 100px;">
                 <!--<img src="assets/images/footer-logo.png" class="logo logo-scrolled" alt="">-->
             </a>
 
