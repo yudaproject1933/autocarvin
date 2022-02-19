@@ -1,7 +1,7 @@
 <script>
     $( document ).ready(function() {
     //title
-    $('title').html('Vin Data Record');
+    $('title').html('Vin History Report Record');
     //tombol print
     $('#singleSummaryButton').remove();
     // add tombol
@@ -9,7 +9,7 @@
     //logo kiri
     // $('.leftLogo').attr('src','https://vindatarecord.com/public/images/VINDATA_RECORD.png'); 
     // $('.leftLogo').css({"width" : "150px"});
-    $('.leftLogo').after("<div class='report-run'><img src='https://vincheckrecord.com/public/images/VINDATA_RECORD.png' style='width: 100px;'></div>");
+    $('.leftLogo').after("<div class='report-run'><img src='https://vincheckhistory.com/public/images/VINDATA_RECORD.png' style='width: 100px;'></div>");
     $('.leftLogo').remove();
     //logo kanan
     // $('.rightLogo').attr('src','https://vindatarecord.com/public/images/VINDATA_RECORD.png'); 
@@ -17,7 +17,7 @@
     $('.rightLogo').remove();
 
     //tulisan header
-    $('.logo-title h1').html('Your Vin Data Record');
+    $('.logo-title h1').html('Your Vin History Report Record');
     $('.logo-title').css({"text-align": "center"});
 
     $('.rundate').css({"padding-left": "0px"});
@@ -75,10 +75,10 @@
     //copyright
     $('footer').css({"text-align": "center"});
     // $('footer b').css({"margin-top": "50px"});
-    $('footer').append("<br/><br/><br/><br/><b style='margin-top : 50px;'>Copyright © Vin Data. All rights reserved</b>");
+    $('footer').append("<br/><br/><br/><br/><b style='margin-top : 50px;'>Copyright © Vin History Report. All rights reserved</b>");
 
     //replace all autocheck
-    fx('AutoCheck','Vin Data');
+    fx('AutoCheck','Vin History Report');
 });
 function copy_url(){
     var $temp = $("<input>");
