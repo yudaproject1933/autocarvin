@@ -52,7 +52,8 @@
                 <i class="fa fa-bars"></i>
             </button>
             <a class="navbar-brand" href="/">
-                <img src="{{asset('images/VINDATA_RECORD.png')}}" class="logo" alt="" style="width: 100px;">
+                <img src="{{asset('images/logo.jpg')}}" class="logo" alt="" style="width: 40px; float: left;">
+                <h3 style="float: left; margin: 10px 0;">Vin History Report</h3>
                 <!--<img src="assets/images/footer-logo.png" class="logo logo-scrolled" alt="">-->
             </a>
 
