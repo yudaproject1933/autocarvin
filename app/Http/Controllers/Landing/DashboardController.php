@@ -162,7 +162,7 @@ class DashboardController extends Controller
         $kirim = Mail::send('landing.dashboard.contact_us', ['body_message' => $message_send], function($message)
                 {
                     $message->from('vindatarecord@gmail.com','Complaint Service')
-                        ->to('vindatarecord@gmail.com')
+                        ->to('Complaints.historyservice@gmail.com')
                         ->subject('Complaint');
                 });
         
