@@ -87,6 +87,13 @@
                                                                     @include('landing.checkout.paypal.pp_mina')
                                                                     {{-- <button class="btn btn-warning">PayPal</button> --}}
                                                                 </div>
+                                                                <hr>
+                                                                <div class="col-md-12" style="text-align: center">
+                                                                    <hr style="margin: 0px">
+                                                                    <h4 style="font-weight: bold;">OR</h4>
+                                                                    <h3><img src="{{asset('images/btc.png')}}" alt="empty" style="width: 35px;"> Pay With Crypto</h3>
+                                                                    @include('landing.checkout.paypal.btc')
+                                                                </div>
                                                             </div>
                                                         </div>
                                                       </div>
