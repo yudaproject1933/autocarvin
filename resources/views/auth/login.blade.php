@@ -19,7 +19,7 @@
   <!-- /.login-logo -->
   <div class="card card-outline card-primary">
     <div class="card-header text-center">
-      <a href="/login" class="h1"><b>VinCheck</b>Record</a>
+      <a href="/login" class="h1"><b>VinHistory</b>Record</a>
     </div>
     <div class="card-body">
       <p class="login-box-msg">Sign in to start your session</p>
@@ -61,12 +61,12 @@
       </form>
       <!-- /.social-auth-links -->
 
-      <p class="mb-1">
+      {{-- <p class="mb-1">
         <a href="">I forgot my password</a>
       </p>
       <p class="mb-0">
         <a href="/register" class="text-center">Register a new membership</a>
-      </p>
+      </p> --}}
     </div>
     <!-- /.card-body -->
   </div>

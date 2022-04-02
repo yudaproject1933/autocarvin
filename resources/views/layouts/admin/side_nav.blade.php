@@ -14,7 +14,7 @@
           <img src="{{asset('admin/dist/img/avatar.png')}}" class="img-circle elevation-2" alt="User Image">
         </div>
         <div class="info">
-          <a href="#" class="d-block">Admin</a>
+          <a href="#" class="d-block">{{Auth::user()->role == 'admin' ? "Admin" : "User"}}</a>
         </div>
       </div>
 
@@ -36,15 +36,52 @@
           <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
           
-          <li class="nav-header">Transaction</li>
-          <li class="nav-item active">
-            <a href="/transaction" class="nav-link active">
-              <i class="nav-icon far fa-image"></i>
-              <p>
-                Transaction
-              </p>
-            </a>
-          </li>
+          <li class="nav-header">Menu</li>
+          <?php
+              if(Auth::user()->role == 'admin'){
+          ?>
+                <li class="nav-item active">
+                  <a href="/transaction" class="nav-link active">
+                    <i class="nav-icon far fa-image"></i>
+                    <p>
+                      Transaction
+                    </p>
+                  </a>
+                </li>
+
+                <li class="nav-item active">
+                  <a href="/list-refund" class="nav-link active">
+                    <i class="nav-icon far fa-file"></i>
+                    <p>
+                      List Refund
+                    </p>
+                  </a>
+                </li>
+          <?php
+              }else{
+          ?>
+                <li class="nav-item active">
+                  <a href="/report" class="nav-link active">
+                    <i class="nav-icon far fa-file"></i>
+                    <p>
+                      Report
+                    </p>
+                  </a>
+                </li>
+                <li class="nav-item active">
+                  <a href="/user" class="nav-link active">
+                    <i class="nav-icon far fa-user"></i>
+                    <p>
+                      Change Password
+                    </p>
+                  </a>
+                </li>
+          <?php
+              }
+          ?>
+          
+
+          
         </ul>
       </nav>
       <!-- /.sidebar-menu -->

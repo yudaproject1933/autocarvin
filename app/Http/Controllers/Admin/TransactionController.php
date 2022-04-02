@@ -10,10 +10,13 @@ use App\Exports\TransactionExport;
 use Maatwebsite\Excel\Facades\Excel;
 
 use App\Models\Transaction;
+use App\Models\User;
 
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\Mail;
 use App\Mail\TransactionEmail;
+use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Crypt;
 use Auth;
 
 class TransactionController extends Controller
@@ -68,7 +71,7 @@ class TransactionController extends Controller
 
             return view('admin.transaction.index', $data);
         }else{
-            return redirect('/');
+            return redirect('/report');
         }
     }
 
@@ -135,18 +138,26 @@ class TransactionController extends Controller
         // $docs = Storage::get('public/report/'.$model['vin'].'.pdf');
 
         //url('/').Storage::url($model['link_docs'])
+        $get_id_user = $this->create_new_user($model->email);
+
         $details = [
             'title' => 'Mail From Vin Data Record',
             'body' => 'Report',
             'link'  => url('/')."/read_report/".$model->id."/".$model->vin,
             'docs_name' => '',
             'vin' => $model['vin'],
+            'is_user' => $get_id_user['is_user'],
+            'url_login' => url('/').'/login',
+            'username' => $model->email,
+            'password' => $model->phone,
         ];
 
+        //send email
         $email = $model->email;
         $kirim = Mail::to($email)->send(new TransactionEmail($details));
 
         $model->update([
+            'id_user' => $get_id_user['model']->id,
             'status_payment' => 'success',
             'updated_date' => date('Y-m-d H:i:s')
         ]);
@@ -264,5 +275,28 @@ class TransactionController extends Controller
         $filename = 'report_'.$start_date.'_to_'.$end_date.'.xlsx';
         
         return Excel::download(new TransactionExport($start_date, $end_date, $status_payment), $filename);
+    }
+
+    public function create_new_user($email)
+    {
+        $cek_user = User::where(['email' => $email, 'role' => 'user'])->first();
+        if (!$cek_user) {
+            $pass = $email.".vehicle";
+
+            $model = User::create([
+                'name' => "USER",
+                'email' => $email,
+                'password' => Hash::make($pass),
+            ]);
+
+            $data['model'] = $model;
+            $data['is_user'] = true;
+            return $data;
+        }else{
+            $data['model'] = $cek_user;
+            $data['is_user'] = false;
+            return $data;
+        }
+
     }
 }

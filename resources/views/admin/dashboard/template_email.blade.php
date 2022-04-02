@@ -18,6 +18,18 @@
     {{-- <p>Thanks for your order, a copy of your report is attached. You may also view the report through the <a href="{{ $details['link'] }}" target="_blank"></a> :</p> --}}
     <p>Thanks for your order, a copy of your report is attached. You may also view the report online <a href="{{ $details['link'] }}" target="_blank">here</a>.</p>
     {{-- {{ $details['link'] }}<br> --}}
-    <span>If you have any question , please just reply this message to get in touch with us.</span>
+
+    <?php
+        if ($details['is_user']) {
+    ?>
+            <p>You can login to your dashboard <a href="{{ $details['url_login'] }}" target="_blank">here</a> with your username below.</p>
+            <p><b>Username : </b>{{ $details['username'] }}</p>
+            <p><b>Password : </b>{{ $details['password'] }}</p>
+    <?php
+        }
+    ?>
+    
+    
+    <span>If you have any question or the item its not as described, please get in touch with us by replying this message.</span>
 </body>
 </html>

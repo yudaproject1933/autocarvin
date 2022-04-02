@@ -79,6 +79,8 @@
                 <li><a href="#features">About</a></li>
                 <li><a href="#testimonial">Testimonials</a></li>
                 <li><a href="#contact">Contact</a></li>
+                <li><a href="/refund-info">Refund Info</a></li>
+                <li><a href="/login"><i class="fa fa-user"></i><?= Auth::check() ? Auth::user()->name : "Login" ?></a></li>
             </ul>
         </div><!-- /.navbar-collapse -->
         @endif

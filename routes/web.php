@@ -25,6 +25,8 @@ Route::get('/check', 'App\Http\Controllers\Landing\CheckoutController@check');
 Route::post('/contact-us', 'App\Http\Controllers\Landing\DashboardController@contactUs');
 
 Route::get('/read_report/{id}/{vin}', 'App\Http\Controllers\Landing\DashboardController@read_report');
+
+Route::get('/refund-info', 'App\Http\Controllers\Admin\ReportController@refund_info');
 // Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
 //     return view('dashboard');
 // })->name('dashboard');
@@ -38,4 +40,9 @@ Route::group(['middleware' => 'auth'], function() {
     //transaction
     Route::resource('/transaction', 'App\Http\Controllers\Admin\TransactionController');
     Route::get('/export_excel', 'App\Http\Controllers\Admin\TransactionController@export_excel');
+
+    Route::resource('/report', 'App\Http\Controllers\Admin\ReportController');
+    Route::get('/list-refund', 'App\Http\Controllers\Admin\ReportController@list_refund');
+
+    Route::resource('/user', 'App\Http\Controllers\Admin\UserController');
 });
