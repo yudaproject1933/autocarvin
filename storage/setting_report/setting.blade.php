@@ -9,7 +9,8 @@
     //logo kiri
     // $('.leftLogo').attr('src','https://vindatarecord.com/public/images/VINDATA_RECORD.png'); 
     // $('.leftLogo').css({"width" : "150px"});
-    $('.leftLogo').after("<div class='report-run'><img src='https://vincheckhistory.com/public/images/VINDATA_RECORD.png' style='width: 100px;'></div>");
+    // $('.leftLogo').after("<div class='report-run'><img src='https://vincheckhistory.com/public/images/VINDATA_RECORD.png' style='width: 100px;'></div>");
+    $('.leftLogo').after("<div class='report-run'></div>");
     $('.leftLogo').remove();
     //logo kanan
     // $('.rightLogo').attr('src','https://vindatarecord.com/public/images/VINDATA_RECORD.png'); 
@@ -20,7 +21,7 @@
     $('.logo-title h1').html('Your Vin History Report Record');
     $('.logo-title').css({"text-align": "center"});
 
-    $('.rundate').css({"padding-left": "0px"});
+    $('.rundate').css({"padding-left": "0px", "font-size": "13px"});
     $('.rundate').appendTo('.report-run');
 
     //background biru
