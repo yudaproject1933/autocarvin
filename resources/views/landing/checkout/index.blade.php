@@ -84,7 +84,7 @@
                                                                 <div class="col-md-12">
                                                                     {{-- <h5>PayPal</h5> --}}
                                                                     <script src="{{asset('landing/js/vendor/jquery-1.11.2.min.js')}}"></script>
-                                                                    @include('landing.checkout.paypal.pp_mina')
+                                                                    @include('landing.checkout.paypal.pp_rendi')
                                                                     {{-- <button class="btn btn-warning">PayPal</button> --}}
                                                                 </div>
                                                                 <hr>
