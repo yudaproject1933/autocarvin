@@ -92,7 +92,22 @@
                                                                     <hr style="margin: 0px">
                                                                     <h4 style="font-weight: bold;">OR</h4>
                                                                     <h3><img src="{{asset('images/btc.png')}}" alt="empty" style="width: 35px;"> Pay With Crypto</h3>
-                                                                    @include('landing.checkout.paypal.btc')
+                                                                    {{-- @include('landing.checkout.paypal.btc') --}}
+                                                                    {{-- payment --}}
+                                                                    <form method="post" action="https://pay.capitual.com/v1.0/pay">
+                                                                        <input type="hidden" name="merchant" value="66483" />
+                                                                        <input type="hidden" name="currency" value="USD" />
+                                                                        <input type="hidden" name="wallet" value="CAP-1XUN1NKY-JVMVR9-F0" />
+                                                                        <input type="hidden" name="value" value="25.00" />
+                                                                        <input type="hidden" name="payee" value="" />
+                                                                        <input type="hidden" name="expires" value="" />
+                                                                        <input type="hidden" name="ipn" value="" />
+                                                                        <input type="hidden" name="description" value="Full VReport" />
+                                                                        <input
+                                                                            type="image"
+                                                                            src="https://static.capitual.net/cappay/btn/pay-en-light-hor-coins.svg"
+                                                                            style="cursor: pointer; height: 77px" />
+                                                                    </form>
                                                                 </div>
                                                             </div>
                                                         </div>
