@@ -130,19 +130,19 @@
                                         <tr>
                                             <td>Full Report</td>
                                             <td>x1</td>
-                                            <td>$25.00</td>
+                                            <td>$28.00</td>
                                         </tr>
                                     </tbody>
                                     <tfoot>
                                         <tr style="color: #01a9ac ;">
                                             <th>Sub Total</th>
                                             <th></th>
-                                            <th>$25.00</th>
+                                            <th>$28.00</th>
                                         </tr>
                                         <tr>
                                             <th>Total</th>
                                             <th></th>
-                                            <th>$25.00</th>
+                                            <th>$28.00</th>
                                         </tr>
                                     </tfoot>
                                 </table>

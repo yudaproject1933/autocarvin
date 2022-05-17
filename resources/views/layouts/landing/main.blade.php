@@ -97,7 +97,7 @@
                         Made 
                         {{-- <i class="fa fa-heart"></i> --}}
                         by 
-                        <a target="_blank" href="#">VinDataRecord</a> 
+                        <a target="_blank" href="#">VinAutoRecords</a> 
                         2015.
                     </p>
                 </div>
