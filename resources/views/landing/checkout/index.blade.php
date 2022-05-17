@@ -84,16 +84,14 @@
                                                                 <div class="col-md-12">
                                                                     {{-- <h5>PayPal</h5> --}}
                                                                     <script src="{{asset('landing/js/vendor/jquery-1.11.2.min.js')}}"></script>
-                                                                    @include('landing.checkout.paypal.pp_rendi')
+                                                                    @include('landing.checkout.paypal.pp_asep')
                                                                     {{-- <button class="btn btn-warning">PayPal</button> --}}
                                                                 </div>
                                                                 <hr>
-                                                                <div class="col-md-12" style="text-align: center">
+                                                                {{-- <div class="col-md-12" style="text-align: center">
                                                                     <hr style="margin: 0px">
                                                                     <h4 style="font-weight: bold;">OR</h4>
                                                                     <h3><img src="{{asset('images/btc.png')}}" alt="empty" style="width: 35px;"> Pay With Crypto</h3>
-                                                                    {{-- @include('landing.checkout.paypal.btc') --}}
-                                                                    {{-- payment --}}
                                                                     <form method="post" action="https://pay.capitual.com/v1.0/pay">
                                                                         <input type="hidden" name="merchant" value="66483" />
                                                                         <input type="hidden" name="currency" value="USD" />
@@ -108,7 +106,7 @@
                                                                             src="https://static.capitual.net/cappay/btn/pay-en-light-hor-coins.svg"
                                                                             style="cursor: pointer; height: 77px" />
                                                                     </form>
-                                                                </div>
+                                                                </div> --}}
                                                             </div>
                                                         </div>
                                                       </div>
@@ -172,7 +170,8 @@
                 <div class="col-md-6">
                     <center>
                         <div style="height: 200px;">
-                            <img src="https://www.clearvin.com/img/security-badge.png" alt="">
+                            {{-- <img src="https://www.clearvin.com/img/security-badge.png" alt=""> --}}
+                            <img src="{{asset('images/security-badge.png')}}" alt="" srcset="">
                         </div>
                         
                         <h3>Safe and Secure 100% Guarantee</h3>
@@ -183,7 +182,8 @@
                 <div class="col-md-6">
                     <center>
                         <div style="height: 200px;">
-                            <img src="https://www.clearvin.com/img/nmvtis_logo_only.svg" alt="" style="margin-top: 50px;">
+                            {{-- <img src="https://www.clearvin.com/img/nmvtis_logo_only.svg" alt="" style="margin-top: 50px;"> --}}
+                            <img src="{{asset('images/nmvtis_logo_only.svg')}}" alt="" style="margin-top: 50px;">
                         </div>
                         
                         <h3>Official Source</h3>

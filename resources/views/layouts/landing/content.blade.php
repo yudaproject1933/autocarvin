@@ -52,7 +52,8 @@
                         <div class="col-md-6">
                             <center>
                                 <div style="height: 200px;">
-                                    <img src="https://www.clearvin.com/img/security-badge.png" alt="">
+                                    {{-- <img src="https://www.clearvin.com/img/security-badge.png" alt=""> --}}
+                                    <img src="{{asset('images/security-badge.png')}}" alt="" srcset="">
                                 </div>
                                 
                                 <h3>Safe and Secure 100% Guarantee</h3>
@@ -63,11 +64,12 @@
                         <div class="col-md-6">
                             <center>
                                 <div style="height: 200px;">
-                                    <img src="https://www.clearvin.com/img/nmvtis_logo_only.svg" alt="" style="margin-top: 50px;">
+                                    {{-- <img src="https://www.clearvin.com/img/nmvtis_logo_only.svg" alt="" style="margin-top: 50px;"> --}}
+                                    <img src="{{asset('images/nmvtis_logo_only.svg')}}" alt="" style="margin-top: 50px;">
                                 </div>
                                 
                                 <h3>Official Source</h3>
-                                <p>VinData is an Approved NMVTIS Data Provider. The National Motor Vehicle Title Information System (NMVTIS) is a program of the U.S. Department of Justice. This program protects you from fraud and unsafe vehicles. There is no more accurate and complete source for VIN data.</p>
+                                <p>VinAutoRecords is an Approved NMVTIS Data Provider. The National Motor Vehicle Title Information System (NMVTIS) is a program of the U.S. Department of Justice. This program protects you from fraud and unsafe vehicles. There is no more accurate and complete source for VIN data.</p>
                             </center>
                             
                         </div>
@@ -76,7 +78,7 @@
                 
                 <div class="col-md-6">
                     <div class="business_item sm-m-top-50">
-                        <h2 class="text-uppercase">VINDATA WILL INCLUDE</h2>
+                        <h2 class="text-uppercase">VinAutoRecords WILL INCLUDE</h2>
                         <ul>
                             <li><i class="fa fa-arrow-circle-right"></i> Title and Brand History</li>
                             <li><i class="fa  fa-arrow-circle-right"></i> Insurance Claim Information</li>
@@ -173,7 +175,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md 12">
-                <h2 class="white-text">Why Do You Need VinDataRecord History ?</h2>
+                <h2 class="white-text">Why Do You Need VinAutoRecords History ?</h2>
             </div>
             <div class="col-md-12">
                 <span class="white-text">Detailed Vehicle History is a fully comprehensive vehicle check, arming you with vital information about the car you want to buy or sell. We uses cutting edge technology to ensure you get accurate and up-to-date information. Every check verifies records from DMV, NMVTIS, Auction, State, Police, Insurance records and more. Every report contains over 60 checks. We have a dedicated team of experts available 7 days a week to assist you with any questions you may have. 100% Satisfaction Guaranteed or we'll refund your full payment.</span>
