@@ -186,4 +186,58 @@ class CheckoutController extends Controller
     {
         //
     }
+    
+    public function payment_fcf()
+    {
+        $date = date('Y-m-d');
+        
+        try {
+            $curl = curl_init();
+
+            curl_setopt_array($curl, array(
+                CURLOPT_URL => 'https://merchant.fcfpay.com/api/v1/create-order',
+                CURLOPT_RETURNTRANSFER => true,
+                CURLOPT_ENCODING => '',
+                CURLOPT_MAXREDIRS => 10,
+                CURLOPT_TIMEOUT => 0,
+                CURLOPT_FOLLOWLOCATION => true,
+                CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+                CURLOPT_CUSTOMREQUEST => 'POST',
+                CURLOPT_POSTFIELDS =>'{
+                    "domain": "https://vinautorecord.com/",
+                    "order_id": "3",
+                    "user_id": "1",
+                    "amount": "10",
+                    "currency_name": "USD",
+                    "currency_code": "840",
+                    "order_date": "2022-04-26",
+                    "redirect_url": "https://vinautorecord.com/thank-you/"
+                }',
+                CURLOPT_HTTPHEADER => array(
+                'Authorization: Bearer P5Yw5JQTXTxo4yXXUb041mXoFroRCudOa9tHOuARkunknEE2tbEqvL8YUkMH',
+                'Content-Type: application/json'
+                ),
+            ));
+
+            $response = curl_exec($curl);
+            $err = curl_error($curl);
+            curl_close($curl);
+
+            if ($err) {
+                echo "cURL Error #:" . $err;
+            } else {
+                print_r(json_decode($response));
+            }
+            // dd($curl);
+            // $response = curl_exec($curl);
+            // dd($response);
+            // curl_close($curl);
+            // dd($response);
+            // echo $response;
+        } catch (\Exception $e) {
+            dd($e->getMessage());
+        }
+        
+
+    }
 }

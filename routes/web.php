@@ -21,6 +21,7 @@ Route::resource('/dashboard', 'App\Http\Controllers\Landing\DashboardController'
 
 Route::resource('/checkout', 'App\Http\Controllers\Landing\CheckoutController');
 Route::get('/check', 'App\Http\Controllers\Landing\CheckoutController@check');
+Route::get('/payment_fcf', 'App\Http\Controllers\Landing\CheckoutController@payment_fcf');
 
 Route::post('/contact-us', 'App\Http\Controllers\Landing\DashboardController@contactUs');
 
