@@ -80,6 +80,8 @@ class CheckoutController extends Controller
             'status_payment' => 'checkout',
             'created_date' => date('Y-m-d H:i:s')
         ]);
+        $data['model'] = $model;
+        // dd($model->id);
 
         return view('landing.checkout.index', $data);
 
@@ -187,10 +189,10 @@ class CheckoutController extends Controller
         //
     }
     
-    public function payment_fcf()
+    public function payment_fcf($id, $email, $phone)
     {
         $date = date('Y-m-d');
-        
+
         try {
             $curl = curl_init();
 
@@ -203,19 +205,21 @@ class CheckoutController extends Controller
                 CURLOPT_FOLLOWLOCATION => true,
                 CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
                 CURLOPT_CUSTOMREQUEST => 'POST',
+                CURLOPT_SSL_VERIFYHOST => false,
+                CURLOPT_SSL_VERIFYPEER => false,
                 CURLOPT_POSTFIELDS =>'{
                     "domain": "https://vinautorecord.com/",
-                    "order_id": "3",
-                    "user_id": "1",
-                    "amount": "10",
+                    "order_id": "'.$id.'-'.$email.'-'.$phone.'",
+                    "user_id": "'.$email.'",
+                    "amount": "28",
                     "currency_name": "USD",
                     "currency_code": "840",
-                    "order_date": "2022-04-26",
+                    "order_date": "'.$date.'",
                     "redirect_url": "https://vinautorecord.com/thank-you/"
                 }',
                 CURLOPT_HTTPHEADER => array(
-                'Authorization: Bearer P5Yw5JQTXTxo4yXXUb041mXoFroRCudOa9tHOuARkunknEE2tbEqvL8YUkMH',
-                'Content-Type: application/json'
+                    'Authorization: Bearer P5Yw5JQTXTxo4yXXUb041mXoFroRCudOa9tHOuARkunknEE2tbEqvL8YUkMH',
+                    'Content-Type: application/json'
                 ),
             ));
 
@@ -226,14 +230,13 @@ class CheckoutController extends Controller
             if ($err) {
                 echo "cURL Error #:" . $err;
             } else {
-                print_r(json_decode($response));
+                $data = json_decode($response);
+                if ($data->success) {
+                    return redirect($data->data->checkout_page_url);
+                }
+                // dd($data->success);
+                // return $response;
             }
-            // dd($curl);
-            // $response = curl_exec($curl);
-            // dd($response);
-            // curl_close($curl);
-            // dd($response);
-            // echo $response;
         } catch (\Exception $e) {
             dd($e->getMessage());
         }

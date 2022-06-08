@@ -84,29 +84,16 @@
                                                                 <div class="col-md-12">
                                                                     {{-- <h5>PayPal</h5> --}}
                                                                     <script src="{{asset('landing/js/vendor/jquery-1.11.2.min.js')}}"></script>
-                                                                    @include('landing.checkout.paypal.pp_asep')
+                                                                    {{-- @include('landing.checkout.paypal.pp_asep') --}}
                                                                     {{-- <button class="btn btn-warning">PayPal</button> --}}
                                                                 </div>
                                                                 <hr>
-                                                                {{-- <div class="col-md-12" style="text-align: center">
+                                                                <div class="col-md-12" style="text-align: center">
                                                                     <hr style="margin: 0px">
-                                                                    <h4 style="font-weight: bold;">OR</h4>
+                                                                    {{-- <h4 style="font-weight: bold;">OR</h4> --}}
                                                                     <h3><img src="{{asset('images/btc.png')}}" alt="empty" style="width: 35px;"> Pay With Crypto</h3>
-                                                                    <form method="post" action="https://pay.capitual.com/v1.0/pay">
-                                                                        <input type="hidden" name="merchant" value="66483" />
-                                                                        <input type="hidden" name="currency" value="USD" />
-                                                                        <input type="hidden" name="wallet" value="CAP-1XUN1NKY-JVMVR9-F0" />
-                                                                        <input type="hidden" name="value" value="25.00" />
-                                                                        <input type="hidden" name="payee" value="" />
-                                                                        <input type="hidden" name="expires" value="" />
-                                                                        <input type="hidden" name="ipn" value="" />
-                                                                        <input type="hidden" name="description" value="Full VReport" />
-                                                                        <input
-                                                                            type="image"
-                                                                            src="https://static.capitual.net/cappay/btn/pay-en-light-hor-coins.svg"
-                                                                            style="cursor: pointer; height: 77px" />
-                                                                    </form>
-                                                                </div> --}}
+                                                                    <button class="btn btn-warning" onclick="fcf_payment()" style="width: 100%;">Pay with FCF</button>
+                                                                </div>
                                                             </div>
                                                         </div>
                                                       </div>
@@ -272,6 +259,17 @@
 
                 $('#payments').show();
             }
+        }
+
+        function fcf_payment() {
+            var id = "<?=$model['id']?>";
+            var email = $('#email').val();
+            var phone = $('#phone').val();
+            var root_url = '<?=URL::to("/")?>';
+
+            var url = root_url+'/payment_fcf/'+id+'/'+email+'/'+phone;
+            // console.log(url);
+            window.location.href = url;
         }
     </script>
 @endsection
