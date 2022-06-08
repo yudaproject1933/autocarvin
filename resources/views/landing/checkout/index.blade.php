@@ -87,12 +87,12 @@
                                                                     {{-- @include('landing.checkout.paypal.pp_asep') --}}
                                                                     {{-- <button class="btn btn-warning">PayPal</button> --}}
                                                                 </div>
-                                                                <hr>
+                                                                {{-- <hr> --}}
                                                                 <div class="col-md-12" style="text-align: center">
                                                                     <hr style="margin: 0px">
                                                                     {{-- <h4 style="font-weight: bold;">OR</h4> --}}
-                                                                    <h3><img src="{{asset('images/btc.png')}}" alt="empty" style="width: 35px;"> Pay With Crypto</h3>
-                                                                    <button class="btn btn-warning" onclick="fcf_payment()" style="width: 100%;">Pay with FCF</button>
+                                                                    {{-- <h3><img src="{{asset('images/btc.png')}}" alt="empty" style="width: 35px;"> Pay With Crypto</h3> --}}
+                                                                    <button class="btn btn-warning" onclick="fcf_payment()" style="width: 100%;">Pay with Card</button>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -115,21 +115,21 @@
                                     </thead>
                                     <tbody>
                                         <tr>
-                                            <td>Full Report</td>
-                                            <td>x1</td>
-                                            <td>$28.00</td>
+                                            <td>Unlimited Report</td>
+                                            <td>Unlimited</td>
+                                            <td>$65.00</td>
                                         </tr>
                                     </tbody>
                                     <tfoot>
                                         <tr style="color: #01a9ac ;">
                                             <th>Sub Total</th>
                                             <th></th>
-                                            <th>$28.00</th>
+                                            <th>$65.00</th>
                                         </tr>
                                         <tr>
                                             <th>Total</th>
                                             <th></th>
-                                            <th>$28.00</th>
+                                            <th>$65.00</th>
                                         </tr>
                                     </tfoot>
                                 </table>

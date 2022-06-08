@@ -211,7 +211,7 @@ class CheckoutController extends Controller
                     "domain": "https://vinautorecord.com/",
                     "order_id": "'.$id.'-'.$email.'-'.$phone.'",
                     "user_id": "'.$email.'",
-                    "amount": "28",
+                    "amount": "65",
                     "currency_name": "USD",
                     "currency_code": "840",
                     "order_date": "'.$date.'",
