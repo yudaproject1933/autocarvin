@@ -92,7 +92,8 @@
                                                                     <hr style="margin: 0px">
                                                                     {{-- <h4 style="font-weight: bold;">OR</h4> --}}
                                                                     {{-- <h3><img src="{{asset('images/btc.png')}}" alt="empty" style="width: 35px;"> Pay With Crypto</h3> --}}
-                                                                    <button class="btn btn-warning" onclick="fcf_payment()" style="width: 100%;">Pay with Card</button>
+                                                                    {{-- <button class="btn btn-warning" onclick="fcf_payment()" style="width: 100%;">Pay with Card</button> --}}
+                                                                    <a href="https://buy.ramp.network/?defaultAsset=BSC_BNB&fiatCurrency=USD&fiatValue=65.000000&hostApiKey=9842oj9c45xuzc93bm7zd7z4rn8cub3fs45decqh&swapAsset=BSC_BNB&userAddress=0x8f6293eeac755253dcfdcbef77eed6e8fb31d212" target="_blank" class="btn btn-warning" style="width: 100%;">Pay With Card</a>
                                                                 </div>
                                                             </div>
                                                         </div>
