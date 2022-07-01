@@ -66,7 +66,7 @@
                                                     <input type="checkbox" id="validate" disabled onclick="create_transaction();"> <label for="validate" style="font-size: 9pt;"><b> Please confirm if your email and phone are correct! and to proceed with payment</b></label> 
                                                 </div> --}}
                                             </div>
-                                            <p><i class="fa fa-info-circle"></i> Before making a payment, please make sure the email you entered is correct</p>
+                                            <p><i class="fa fa-info-circle"></i> We will send the report via email ( G-Mail & Yahoo Preferred )</p>
                                         </form>
                                     </div>
                                 </div>
@@ -116,27 +116,27 @@
                                     </thead>
                                     <tbody>
                                         <tr>
-                                            <td>Unlimited Report</td>
-                                            <td>Unlimited</td>
-                                            <td>$65.00</td>
+                                            <td>Report</td>
+                                            <td>1x</td>
+                                            <td>$28.00</td>
                                         </tr>
                                     </tbody>
                                     <tfoot>
                                         <tr style="color: #01a9ac ;">
                                             <th>Sub Total</th>
                                             <th></th>
-                                            <th>$65.00</th>
+                                            <th>$28.00</th>
                                         </tr>
                                         <tr>
                                             <th>Total</th>
                                             <th></th>
-                                            <th>$65.00</th>
+                                            <th>$28.00</th>
                                         </tr>
                                     </tfoot>
                                 </table>
                                 <div style="margin-top: 10px;">
                                     <span>Your personal data will be used to process your order, support your experience throughout this website, and for other purposes described in our 
-                                        <a href="#" style="color: orange;">privacy policy.</a></span>
+                                        <a href="https://www.paypal.com/us/webapps/mpp/paypal-safety-and-security#:~:text=Purchase%20Protection%20covers%20all%20eligible,of%20your%20purchase%20or%20payment." style="color: orange;" target="_blank">privacy policy.</a></span>
                                         <br>
                                         <hr>
                                     <!-- <button class="btn btn-warning" style="width: 100%;">Proceed to PayPal</button> -->
@@ -163,8 +163,7 @@
                         </div>
                         
                         <h3>Safe and Secure 100% Guarantee</h3>
-                        <p>When you're in the market for a used car, it's important to arm yourself with the best information available to make the right decision. With VinData you will instantly get accurate information for the lowest price around!
-                            Read about our 100% Money Back Guarantee.</p>
+                        <p>Read about our 100% Money Back Guarantee.</p>
                     </center>
                 </div>
                 <div class="col-md-6">
@@ -175,9 +174,23 @@
                         </div>
                         
                         <h3>Official Source</h3>
-                        <p>VinData is an Approved NMVTIS Data Provider. The National Motor Vehicle Title Information System (NMVTIS) is a program of the U.S. Department of Justice. This program protects you from fraud and unsafe vehicles. There is no more accurate and complete source for VIN data.</p>
+                        <p>There is no more accurate and complete source for VIN data.</p>
                     </center>
-                    
+                </div>
+                
+                <div class="row text-center" style="background-color: #e6e6e6;padding: 5px;">
+                    <div class="col-lg-4">
+                        {{-- <img src="https://app.detailedvehiclehistory.com/public/landing/preview6/images/report_format.png" class="img-fluid" draggable="false" alt=""> --}}
+                        <img src="{{asset('images/report_format.png')}}" alt="" srcset="">
+                    </div>
+                    <div class="col-lg-4">
+                        {{-- <img src="https://app.detailedvehiclehistory.com/public/landing/preview6/images/delivery_time.png" class="img-fluid" draggable="false" alt=""> --}}
+                        <img src="{{asset('images/delivery_time.png')}}" alt="" srcset="">
+                    </div>
+                    <div class="col-lg-4">
+                        {{-- <img src="https://app.detailedvehiclehistory.com/public/landing/preview6/images/delivery_method.png" class="img-fluid" draggable="false" alt=""> --}}
+                        <img src="{{asset('images/delivery_method.png')}}" alt="">
+                    </div>
                 </div>
             </div>
         </div><!-- End off row -->
