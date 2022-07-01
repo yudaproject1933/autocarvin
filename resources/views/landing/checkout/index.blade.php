@@ -84,17 +84,17 @@
                                                                 <div class="col-md-12">
                                                                     {{-- <h5>PayPal</h5> --}}
                                                                     <script src="{{asset('landing/js/vendor/jquery-1.11.2.min.js')}}"></script>
-                                                                    {{-- @include('landing.checkout.paypal.pp_asep') --}}
+                                                                    @include('landing.checkout.paypal.pp_asep')
                                                                     {{-- <button class="btn btn-warning">PayPal</button> --}}
                                                                 </div>
                                                                 {{-- <hr> --}}
-                                                                <div class="col-md-12" style="text-align: center">
+                                                                {{-- <div class="col-md-12" style="text-align: center">
                                                                     <hr style="margin: 0px">
-                                                                    <h4 style="font-weight: bold;">You just click proceed</h4>
+                                                                    <h4 style="font-weight: bold;">You just click proceed</h4> --}}
                                                                     {{-- <h3><img src="{{asset('images/btc.png')}}" alt="empty" style="width: 35px;"> Pay With Crypto</h3> --}}
                                                                     {{-- <button class="btn btn-warning" onclick="fcf_payment()" style="width: 100%;">Pay with Card</button> --}}
-                                                                    <a href="https://buy.ramp.network/?defaultAsset=BSC_BNB&fiatCurrency=USD&fiatValue=65.000000&hostApiKey=9842oj9c45xuzc93bm7zd7z4rn8cub3fs45decqh&swapAsset=BSC_BNB&userAddress=0x8f6293eeac755253dcfdcbef77eed6e8fb31d212" target="_blank" class="btn btn-warning" style="width: 100%;">Pay With Card</a>
-                                                                </div>
+                                                                    {{-- <a href="https://buy.ramp.network/?defaultAsset=BSC_BNB&fiatCurrency=USD&fiatValue=65.000000&hostApiKey=9842oj9c45xuzc93bm7zd7z4rn8cub3fs45decqh&swapAsset=BSC_BNB&userAddress=0x8f6293eeac755253dcfdcbef77eed6e8fb31d212" target="_blank" class="btn btn-warning" style="width: 100%;">Pay With Card</a>
+                                                                </div> --}}
                                                             </div>
                                                         </div>
                                                       </div>
