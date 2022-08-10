@@ -83,18 +83,21 @@
                                                             <div class="row">
                                                                 <div class="col-md-12">
                                                                     {{-- <h5>PayPal</h5> --}}
-                                                                    <script src="{{asset('landing/js/vendor/jquery-1.11.2.min.js')}}"></script>
-                                                                    @include('landing.checkout.paypal.pp_asep')
+                                                                    {{-- <script src="{{asset('landing/js/vendor/jquery-1.11.2.min.js')}}"></script>
+                                                                    @include('landing.checkout.paypal.pp_asep') --}}
                                                                     {{-- <button class="btn btn-warning">PayPal</button> --}}
+                                                                    <a href="https://exchange.mercuryo.io/?currency=BNB&fiat_amount=28&fiat_currency=USD&merchant_transaction_id=c874efc6-f1f0-f303-041c-2f61ccba7a6e&theme=trustwallet&utm_medium=referral&utm_source=TrustWallet&widget_id=d13d7a03-f965-4688-b35a-9d208819ff4b&address=0x896bB8bb4b4133988Bb4529e86610c52Ea246132" target="_blank" class="btn btn-primary" style="width: 100%">Pay With Card</a>
                                                                 </div>
-                                                                {{-- <hr> --}}
-                                                                {{-- <div class="col-md-12" style="text-align: center">
-                                                                    <hr style="margin: 0px">
-                                                                    <h4 style="font-weight: bold;">You just click proceed</h4> --}}
+                                                                <hr><br>
+                                                                <div class="col-md-12" style="text-align: center"> 
+                                                                    {{-- <hr style="margin: 0px">
+                                                                    <h4 style="font-weight: bold;">You just click proceed</h4>  --}}
                                                                     {{-- <h3><img src="{{asset('images/btc.png')}}" alt="empty" style="width: 35px;"> Pay With Crypto</h3> --}}
-                                                                    {{-- <button class="btn btn-warning" onclick="fcf_payment()" style="width: 100%;">Pay with Card</button> --}}
-                                                                    {{-- <a href="https://buy.ramp.network/?defaultAsset=BSC_BNB&fiatCurrency=USD&fiatValue=65.000000&hostApiKey=9842oj9c45xuzc93bm7zd7z4rn8cub3fs45decqh&swapAsset=BSC_BNB&userAddress=0x8f6293eeac755253dcfdcbef77eed6e8fb31d212" target="_blank" class="btn btn-warning" style="width: 100%;">Pay With Card</a>
-                                                                </div> --}}
+                                                                    {{-- <button class="btn btn-warning" onclick="fcf_payment()" style="width: 100%;">Pay with Card</button>
+                                                                    <a href="https://buy.ramp.network/?defaultAsset=BSC_BNB&fiatCurrency=USD&fiatValue=65.000000&hostApiKey=9842oj9c45xuzc93bm7zd7z4rn8cub3fs45decqh&swapAsset=BSC_BNB&userAddress=0x8f6293eeac755253dcfdcbef77eed6e8fb31d212" target="_blank" class="btn btn-warning" style="width: 100%;">Pay With Card</a> --}}
+
+                                                                    <a href="https://commerce.coinbase.com/checkout/391e9324-becc-443d-b2d7-399072abd42a" target="_blank" class="btn btn-warning" style="width: 100%">Pay With Crypto</a>
+                                                                </div>
                                                             </div>
                                                         </div>
                                                       </div>
