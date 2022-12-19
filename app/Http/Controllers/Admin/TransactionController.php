@@ -147,7 +147,7 @@ class TransactionController extends Controller
             'link'  => url('/')."/read_report/".$model->id."/".$model->vin,
             'docs_name' => '',
             'vin' => $model['vin'],
-            'is_user' => $get_id_user['is_user'],
+            'id_user' => $get_id_user['id_user'],
             'url_login' => url('/').'/login',
             'username' => $model->email,
             'password' => $model->phone,
@@ -158,7 +158,7 @@ class TransactionController extends Controller
         $kirim = Mail::to($email)->send(new TransactionEmail($details));
 
         $model->update([
-            'id_user' => $get_id_user['model']->id,
+            'id_user' => $get_id_user['id_user'],
             'status_payment' => 'success',
             'updated_date' => date('Y-m-d H:i:s')
         ]);
