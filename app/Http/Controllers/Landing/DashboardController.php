@@ -114,9 +114,11 @@ class DashboardController extends Controller
 
         if ($vin == $data_vin) {
             $file = $data_vin.".blade.php";
-            $file = Storage::get('public/bank_report/'.$file);
+            // $file = Storage::get('public/bank_report/'.$file);
 
-            return $file;
+            $file = $data_vin.".pdf";
+            return response()->download(storage_path('/app/public/report/'. $file));
+            // return $file;
         }else{
             return view('error404');
         }
