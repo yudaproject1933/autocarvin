@@ -20,13 +20,13 @@
     {{-- {{ $details['link'] }}<br> --}}
 
     <?php
-        if ($details['is_user']) {
+        // if ($details['is_user']) {
     ?>
             <p>You can login to your dashboard <a href="{{ $details['url_login'] }}" target="_blank">here</a> with your username below.</p>
             <p><b>Username : </b>{{ $details['username'] }}</p>
             <p><b>Password : </b>{{ $details['password'] }}</p>
     <?php
-        }
+        // }
     ?>
     
     

@@ -138,9 +138,17 @@ class TransactionController extends Controller
         // $docs = Storage::get('public/report/'.$model['vin'].'.pdf');
 
         //url('/').Storage::url($model['link_docs'])
-        $get_id_user = $this->create_new_user($model);
-        // dd($get_id_user);
+        
+        // dd($get_id_user['model']->id);
 
+        $model->update([
+            // 'id_user' => $get_id_user['model']->id,
+            'status_payment' => 'success',
+            'updated_date' => date('Y-m-d H:i:s')
+        ]);
+
+        $get_id_user = $this->create_new_user($model);
+        
         $details = [
             'title' => 'Mail From Vin Data Record',
             'body' => 'Report',
@@ -157,11 +165,6 @@ class TransactionController extends Controller
         $email = $model->email;
         $kirim = Mail::to($email)->send(new TransactionEmail($details));
 
-        $model->update([
-            'id_user' => $get_id_user['id_user'],
-            'status_payment' => 'success',
-            'updated_date' => date('Y-m-d H:i:s')
-        ]);
 
         return [
             'success' => true,
