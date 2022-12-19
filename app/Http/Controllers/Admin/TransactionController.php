@@ -147,7 +147,7 @@ class TransactionController extends Controller
             'link'  => url('/')."/read_report/".$model->id."/".$model->vin,
             'docs_name' => '',
             'vin' => $model['vin'],
-            'id_user' => $get_id_user['id_user'],
+            'is_user' => $get_id_user['is_user'],
             'url_login' => url('/').'/login',
             'username' => $model->email,
             'password' => $model->phone,
