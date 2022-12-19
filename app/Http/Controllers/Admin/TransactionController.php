@@ -138,7 +138,8 @@ class TransactionController extends Controller
         // $docs = Storage::get('public/report/'.$model['vin'].'.pdf');
 
         //url('/').Storage::url($model['link_docs'])
-        $get_id_user = $this->create_new_user($model->email);
+        $get_id_user = $this->create_new_user($model);
+        // dd($get_id_user);
 
         $details = [
             'title' => 'Mail From Vin Data Record',
@@ -277,15 +278,15 @@ class TransactionController extends Controller
         return Excel::download(new TransactionExport($start_date, $end_date, $status_payment), $filename);
     }
 
-    public function create_new_user($email)
+    public function create_new_user($data)
     {
-        $cek_user = User::where(['email' => $email, 'role' => 'user'])->first();
+        $cek_user = User::where(['email' => $data->email, 'role' => 'user'])->first();
         if (!$cek_user) {
-            $pass = $email.".vehicle";
+            $pass = $data->phone;
 
             $model = User::create([
                 'name' => "USER",
-                'email' => $email,
+                'email' => $data->email,
                 'password' => Hash::make($pass),
             ]);
 
